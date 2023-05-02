@@ -1,0 +1,17 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:71:13: overloaded method value write with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (idx: chisel3.UInt,data: chisel3.UInt,mask: Seq[chisel3.Bool],clock: chisel3.Clock)(implicit evidence: chisel3.UInt <:< chisel3.Vec[_], implicit compileOptions: chisel3.CompileOptions)Unit <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (idx: chisel3.UInt,data: chisel3.UInt,mask: Seq[chisel3.Bool])(implicit evidence: chisel3.UInt <:< chisel3.Vec[_], implicit compileOptions: chisel3.CompileOptions)Unit <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (idx: chisel3.UInt,data: chisel3.UInt,clock: chisel3.Clock)(implicit compileOptions: chisel3.CompileOptions)Unit <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (idx: chisel3.UInt,data: chisel3.UInt)(implicit compileOptions: chisel3.CompileOptions)Unit[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (chisel3.UInt)[0m
+[0m[[0m[31merror[0m] [0m[0m    evenMem.write(writeBundle.even)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:72:12: overloaded method value write with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (idx: chisel3.UInt,data: chisel3.UInt,mask: Seq[chisel3.Bool],clock: chisel3.Clock)(implicit evidence: chisel3.UInt <:< chisel3.Vec[_], implicit compileOptions: chisel3.CompileOptions)Unit <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (idx: chisel3.UInt,data: chisel3.UInt,mask: Seq[chisel3.Bool])(implicit evidence: chisel3.UInt <:< chisel3.Vec[_], implicit compileOptions: chisel3.CompileOptions)Unit <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (idx: chisel3.UInt,data: chisel3.UInt,clock: chisel3.Clock)(implicit compileOptions: chisel3.CompileOptions)Unit <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (idx: chisel3.UInt,data: chisel3.UInt)(implicit compileOptions: chisel3.CompileOptions)Unit[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (chisel3.UInt)[0m
+[0m[[0m[31merror[0m] [0m[0m    oddMem.write(writeBundle.odd)[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
