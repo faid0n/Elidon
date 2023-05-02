@@ -1,0 +1,561 @@
+2023.05.02 15:34:46 INFO  Started: Metals version 0.11.12 in workspace 'C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon' for client Visual Studio Code 1.77.3.
+May 02, 2023 3:34:46 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+May 02, 2023 3:34:46 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+May 02, 2023 3:34:46 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+May 02, 2023 3:34:48 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\.metals\metals (H2 2.1)
+May 02, 2023 3:34:48 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+May 02, 2023 3:34:48 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.120s)
+May 02, 2023 3:34:48 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+May 02, 2023 3:34:48 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+May 02, 2023 3:34:48 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+May 02, 2023 3:34:48 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+May 02, 2023 3:34:48 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+May 02, 2023 3:34:49 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+May 02, 2023 3:34:49 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.312s)
+2023.05.02 15:34:49 INFO  time: initialize in 2.97s
+May 02, 2023 3:34:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///c%3A/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/src/main/scala/empty/PC.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import chisel3._\r\n\r\nclass PC extends Module {\r\n  val io \u003d IO(new Bundle {\r\n    // Clock input to pc\r\n    val clock \u003d Input(Clock()) \r\n    // 1 \u003e normal operation, 0 \u003e resets PC\r\n    val normalOperation \u003d Input(Bool()) \r\n    val sel_a     \u003d Input(Bool()) //\r\n    val sel_imm   \u003d Input(Bool())\r\n    val branch    \u003d Input(Bool())\r\n    val a         \u003d Input(UInt(16.W))\r\n    val d_imm     \u003d Input(UInt(16.W))\r\n    val e_imm     \u003d Input(UInt(16.W))\r\n    val pc_addr   \u003d Input(UInt(16.W))\r\n    val addr      \u003d Output(UInt(16.W))\r\n    val nextAddress \u003d Output(UInt(16.W))\r\n  })\r\n\r\n  val adressReg   \u003d RegInit(0.U(16.W))\r\n  val mux1  \u003d Wire(UInt(16.W))\r\n  val mux2  \u003d Wire(UInt(16.W))\r\n  val mux3  \u003d Wire(UInt(16.W))\r\n\r\n  io.addr      :\u003d mux3\r\n  io.nextAddress :\u003d addresReg\r\n\r\n  mux1 :\u003d Mux(io.branch \u003d\u003d\u003d false.B, addressReg, io.pc_addr)\r\n  mux2 :\u003d Mux(io.branch \u003d\u003d\u003d false.B, 2.U, io.e_imm + 2.U)\r\n\r\n  when(io.sel_imm \u003d\u003d\u003d false.B \u0026\u0026 io.sel_a \u003d\u003d\u003d false.B) {\r\n    mux3 :\u003d mux1 + mux2\r\n  }.elsewhen(io.sel_imm \u003d\u003d\u003d false.B \u0026\u0026 io.sel_a \u003d\u003d\u003d true.B) {\r\n    mux3 :\u003d 4.U + io.a\r\n  }.elsewhen(io.sel_imm \u003d\u003d\u003d true.B \u0026\u0026 io.sel_a \u003d\u003d\u003d false.B) {\r\n    mux3 :\u003d Cat(io.d_imm(13, 0), 0.U(2.W))\r\n  }.otherwise {\r\n    mux3 :\u003d 0.U\r\n  }\r\n\r\n  when(!io.normalOperation) {\r\n    addressReg :\u003d 0.U\r\n  }.elsewhen (risingEdge(io.clock)) {\r\n    addressReg :\u003d mux3\r\n  }\r\n}\r\n\r\n\r\nclass PC2 extends Module {\r\n  val io \u003d IO(new Bundle {\r\n    // 1 \u003e normal operation, 0 \u003e resets PC\r\n    val normalOperation \u003d Input(Bool())\r\n    val jumpAdress \u003d Input(Uint(16.W))\r\n    val jump \u003d Input(Bool())\r\n    val nextAddress \u003d Output(UInt(16.W))\r\n  })\r\n\r\n  val adressReg   \u003d RegInit(0.U(16.W))\r\n  val mux1  \u003d Wire(UInt(16.W))\r\n  val mux2  \u003d Wire(UInt(16.W))\r\n  val mux3  \u003d Wire(UInt(16.W))\r\n\r\n  io.addr      :\u003d mux3\r\n  io.nextAddress :\u003d addresReg\r\n\r\n  mux1 :\u003d Mux(io.branch \u003d\u003d\u003d false.B, addressReg, io.pc_addr)\r\n  mux2 :\u003d Mux(io.branch \u003d\u003d\u003d false.B, 2.U, io.e_imm + 2.U)\r\n\r\n  when(io.sel_imm \u003d\u003d\u003d false.B \u0026\u0026 io.sel_a \u003d\u003d\u003d false.B) {\r\n    mux3 :\u003d mux1 + mux2\r\n  }.elsewhen(io.sel_imm \u003d\u003d\u003d false.B \u0026\u0026 io.sel_a \u003d\u003d\u003d true.B) {\r\n    mux3 :\u003d 4.U + io.a\r\n  }.elsewhen(io.sel_imm \u003d\u003d\u003d true.B \u0026\u0026 io.sel_a \u003d\u003d\u003d false.B) {\r\n    mux3 :\u003d Cat(io.d_imm(13, 0), 0.U(2.W))\r\n  }.otherwise {\r\n    mux3 :\u003d 0.U\r\n  }\r\n\r\n  when(!io.normalOperation) {\r\n    addressReg :\u003d 0.U\r\n  }.otherwise {\r\n    addressReg :\u003d mux3\r\n  }\r\n}\r\n"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: c:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\empty\PC.scala
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLspService.didOpen(MetalsLspService.scala:1113)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:39)
+	... 16 more
+
+May 02, 2023 3:34:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///c%3A/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/empty/register_file.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import chisel3._\r\n\r\nclass RegisterFile extends Module {\r\n  val io \u003d IO(new Bundle {\r\n    val aAddr \u003d Input(UInt(4.W))\r\n    val bAddr \u003d Input(UInt(4.W))\r\n    val rdAddr \u003d Input(UInt(4.W))\r\n    val wrAddr \u003d Input(UInt(4.W))\r\n    val wrData \u003d Input(UInt(16.W))\r\n    val wrEna \u003d Input(Bool())\r\n    val rs1Data \u003d Output(UInt(16.W))\r\n    val rs2Data \u003d Output(UInt(16.W))\r\n  })\r\n\r\n  val regFile \u003d SyncReadMem(16, Vec(2, UInt(16.W)))\r\n\r\n  when(io.wrEna) {\r\n    regFile.write(io.wrAddr, VecInit(Seq(io.wrData, 0.U)))\r\n  }\r\n\r\n  io.rs1Data :\u003d regFile.read(io.aAddr, 0.U)(0)\r\n  io.rs2Data :\u003d regFile.read(io.bAddr, 0.U)(0)\r\n}\r\n/**\r\n  *  The wrEna input controls whether a write occurs, and the wrData input specifies the data to be written. The rs1Addr, rs2Addr, and rdAddr inputs specify the addresses of the source and destination registers, and the rs1Data and rs2Data outputs provide the data from the source registers.\r\n  */"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: c:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\empty\register_file.scala
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLspService.didOpen(MetalsLspService.scala:1113)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:39)
+	... 16 more
+
+May 02, 2023 3:34:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///c%3A/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/empty/PC.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import chisel3._\r\n\r\nclass PC extends Module {\r\n  val io \u003d IO(new Bundle {\r\n    // Clock input to pc\r\n    val clock \u003d Input(Clock()) \r\n    // 1 \u003e normal operation, 0 \u003e resets PC\r\n    val normalOperation \u003d Input(Bool()) \r\n    val sel_a     \u003d Input(Bool()) //\r\n    val sel_imm   \u003d Input(Bool())\r\n    val branch    \u003d Input(Bool())\r\n    val a         \u003d Input(UInt(16.W))\r\n    val d_imm     \u003d Input(UInt(16.W))\r\n    val e_imm     \u003d Input(UInt(16.W))\r\n    val pc_addr   \u003d Input(UInt(16.W))\r\n    val addr      \u003d Output(UInt(16.W))\r\n    val nextAddress \u003d Output(UInt(16.W))\r\n  })\r\n\r\n  val adressReg   \u003d RegInit(0.U(16.W))\r\n  val mux1  \u003d Wire(UInt(16.W))\r\n  val mux2  \u003d Wire(UInt(16.W))\r\n  val mux3  \u003d Wire(UInt(16.W))\r\n\r\n  io.addr      :\u003d mux3\r\n  io.nextAddress :\u003d addresReg\r\n\r\n  mux1 :\u003d Mux(io.branch \u003d\u003d\u003d false.B, addressReg, io.pc_addr)\r\n  mux2 :\u003d Mux(io.branch \u003d\u003d\u003d false.B, 2.U, io.e_imm + 2.U)\r\n\r\n  when(io.sel_imm \u003d\u003d\u003d false.B \u0026\u0026 io.sel_a \u003d\u003d\u003d false.B) {\r\n    mux3 :\u003d mux1 + mux2\r\n  }.elsewhen(io.sel_imm \u003d\u003d\u003d false.B \u0026\u0026 io.sel_a \u003d\u003d\u003d true.B) {\r\n    mux3 :\u003d 4.U + io.a\r\n  }.elsewhen(io.sel_imm \u003d\u003d\u003d true.B \u0026\u0026 io.sel_a \u003d\u003d\u003d false.B) {\r\n    mux3 :\u003d Cat(io.d_imm(13, 0), 0.U(2.W))\r\n  }.otherwise {\r\n    mux3 :\u003d 0.U\r\n  }\r\n\r\n  when(!io.normalOperation) {\r\n    addressReg :\u003d 0.U\r\n  }.elsewhen (risingEdge(io.clock)) {\r\n    addressReg :\u003d mux3\r\n  }\r\n}\r\n\r\n\r\nclass PC2 extends Module {\r\n  val io \u003d IO(new Bundle {\r\n    // 1 \u003e normal operation, 0 \u003e resets PC\r\n    val normalOperation \u003d Input(Bool())\r\n    val jumpAdress \u003d Input(Uint(16.W))\r\n    val jump \u003d Input(Bool())\r\n    val nextAddress \u003d Output(UInt(16.W))\r\n  })\r\n\r\n  val adressReg   \u003d RegInit(0.U(16.W))\r\n  val mux1  \u003d Wire(UInt(16.W))\r\n  val mux2  \u003d Wire(UInt(16.W))\r\n  val mux3  \u003d Wire(UInt(16.W))\r\n\r\n  io.addr      :\u003d mux3\r\n  io.nextAddress :\u003d addresReg\r\n\r\n  mux1 :\u003d Mux(io.branch \u003d\u003d\u003d false.B, addressReg, io.pc_addr)\r\n  mux2 :\u003d Mux(io.branch \u003d\u003d\u003d false.B, 2.U, io.e_imm + 2.U)\r\n\r\n  when(io.sel_imm \u003d\u003d\u003d false.B \u0026\u0026 io.sel_a \u003d\u003d\u003d false.B) {\r\n    mux3 :\u003d mux1 + mux2\r\n  }.elsewhen(io.sel_imm \u003d\u003d\u003d false.B \u0026\u0026 io.sel_a \u003d\u003d\u003d true.B) {\r\n    mux3 :\u003d 4.U + io.a\r\n  }.elsewhen(io.sel_imm \u003d\u003d\u003d true.B \u0026\u0026 io.sel_a \u003d\u003d\u003d false.B) {\r\n    mux3 :\u003d Cat(io.d_imm(13, 0), 0.U(2.W))\r\n  }.otherwise {\r\n    mux3 :\u003d 0.U\r\n  }\r\n\r\n  when(!io.normalOperation) {\r\n    addressReg :\u003d 0.U\r\n  }.otherwise {\r\n    addressReg :\u003d mux3\r\n  }\r\n}\r\n"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: c:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\empty\PC.scala
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLspService.didOpen(MetalsLspService.scala:1113)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:39)
+	... 16 more
+
+May 02, 2023 3:34:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///c%3A/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/src/main/scala/Decode/DecodeStage.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import chisel3._\r\nimport chisel3.util._\r\n\r\nclass DecodeStage extends Module {\r\n  // val io \u003d IO(new Bundle {\r\n  // })\r\n}"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: c:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode\DecodeStage.scala
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLspService.didOpen(MetalsLspService.scala:1113)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:39)
+	... 16 more
+
+May 02, 2023 3:34:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///c%3A/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/src/main/scala/Execute/ExecuteStage.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import chisel3._\r\nimport chisel3.util._\r\n\r\nclass ExecuteStage extends Module {\r\n  // val io \u003d IO(new Bundle {\r\n  // })\r\n}"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: c:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute\ExecuteStage.scala
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLspService.didOpen(MetalsLspService.scala:1113)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:39)
+	... 16 more
+
+May 02, 2023 3:34:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///c%3A/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/src/main/scala/Memory/MemoryStage.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import chisel3._\r\nimport chisel3.util._\r\n\r\nclass MemoryStage extends Module {\r\n  // val io \u003d IO(new Bundle {\r\n  // })\r\n}"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: c:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory\MemoryStage.scala
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLspService.didOpen(MetalsLspService.scala:1113)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:39)
+	... 16 more
+
+May 02, 2023 3:34:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///c%3A/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/src/main/scala/Memory/DataMemory.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import chisel3._\r\nimport chisel3.util._\r\n\r\nclass DataMemory extends Module {\r\n  val io \u003d IO(new Bundle {\r\n    val readAdress \u003d Input(UInt(16.W))\r\n    val writeAdress \u003d Input(UInt(16.W))\r\n    val writeEnable \u003d Input(Bool)\r\n    val writeValue \u003d Input(UInt(16.W))\r\n    val readValue \u003d Output(UInt(16.W))\r\n  })\r\n\r\n  val evenMem \u003d ReadSyncMem(2^15, UInt(8.W))\r\n  val oddMem \u003d ReadSyncMem(2^15, UInt(8.W))\r\n\r\n  class ReadBundle extends Bundle {\r\n    val msB \u003d UInt(8.W)\r\n    val lsB \u003d UInt(8.W)\r\n  }\r\n\r\n  val readBundle \u003d Wire(new ReadBundle)\r\n  val readAdressOdd \u003d WireDefault(io.readAdress(15,1))\r\n  val readAdressEven \u003d Wire(UInt(15.W))\r\n\r\n  when(io.readAdress(0))) {\r\n    readAdressEven :\u003d readAdressOdd + 1.U\r\n    readBundle.msB :\u003d evenMem.read(readAdressOdd)\r\n    readBundle.lsB :\u003d oddMem.read(readAdressEven)\r\n  } .otherwise {\r\n    readAdressEven :\u003d readAdressOdd\r\n    readBundle.msB :\u003d evenMem.read(readAdressEven)\r\n    readBundle.lsB :\u003d oddMem.read(readAdressOdd)\r\n  }\r\n\r\n  class WriteBundle extends Bundle {\r\n    val even \u003d UInt(8.W)\r\n    val odd \u003d UInt(8.W)\r\n  }\r\n\r\n  val writeBundle \u003d Wire(new WriteBundle)\r\n  val writeAdressOdd \u003d WireDefault(io.writeAdress(15,1))\r\n  val writeAdressEven \u003d Wire(UInt(15.W))\r\n\r\n  when(io.writeAdress \u0026 1.U) {\r\n    writeAdressEven :\u003d writeAdressOdd + 1.U\r\n    writeBundle.even :\u003d io.writeValue(7, 0)\r\n    writeBundle.odd :\u003d io.writeValue(15, 8)\r\n  } .otherwise {\r\n    writeAdressEven :\u003d writeAdressOdd\r\n    writeBundle.even :\u003d io.writeValue(15, 8)\r\n    writeBundle.odd :\u003d io.writeValue(7, 0)\r\n  }\r\n\r\n  when(io.writeEnable) {\r\n    evenMem.write(writeBundle.even)\r\n    oddMem.write(writeBudnel.odd)\r\n  }\r\n\r\n  when(io.readAdress \u003d\u003d\u003d io.writeAdress) {\r\n    io.readValue :\u003d io.writeValue\r\n  } .otherwise {\r\n    io.readValue :\u003d readBundle.asUInt\r\n  }\r\n}"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: c:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory\DataMemory.scala
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLspService.didOpen(MetalsLspService.scala:1113)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:39)
+	... 16 more
+
+May 02, 2023 3:34:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///c%3A/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/src/main/scala/WriteBackStage/WriteBackStage.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import chisel3._\r\nimport chisel3.util._\r\n\r\nclass WriteBackStage extends Module {\r\n  // val io \u003d IO(new Bundle {\r\n  // })\r\n}"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: c:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\WriteBackStage\WriteBackStage.scala
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLspService.didOpen(MetalsLspService.scala:1113)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:39)
+	... 16 more
+
+May 02, 2023 3:34:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///c%3A/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/src/main/scala/FetchStage/FetchStage.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import chisel3._\r\nimport chisel3.util._\r\n\r\nclass FetchStage extends Module {\r\n  // val io \u003d IO(new Bundle {\r\n  // })\r\n  val instructionMem \u003d Module(new Memory)\r\n}"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: c:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\FetchStage\FetchStage.scala
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLspService.didOpen(MetalsLspService.scala:1113)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:39)
+	... 16 more
+
+May 02, 2023 3:34:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///c%3A/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/src/main/scala/ExecuteStage/ExecuteStage.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import chisel3._\r\nimport chisel3.util._\r\n\r\nclass ExecuteStage extends Module {\r\n  // val io \u003d IO(new Bundle {\r\n  // })\r\n}"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: c:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\ExecuteStage\ExecuteStage.scala
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLspService.didOpen(MetalsLspService.scala:1113)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:39)
+	... 16 more
+
+May 02, 2023 3:34:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///c%3A/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/src/main/scala/DecodeStage/DecodeStage.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import chisel3._\r\nimport chisel3.util._\r\n\r\nclass DecodeStage extends Module {\r\n  // val io \u003d IO(new Bundle {\r\n  // })\r\n}"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: c:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\DecodeStage\DecodeStage.scala
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLspService.didOpen(MetalsLspService.scala:1113)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:39)
+	... 16 more
+
+2023.05.02 15:34:51 WARN  Build server is not auto-connectable.
+2023.05.02 15:34:51 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+2023.05.02 15:34:51 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Write Back Stage\WriteBackStage.scala
+2023.05.02 15:34:51 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala
+2023.05.02 15:34:51 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Main.scala
+2023.05.02 15:34:51 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\Assembler.scala
+2023.05.02 15:34:51 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.02 15:34:51 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory Stage\MemoryStage.scala
+2023.05.02 15:34:51 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DisplayMultiplexer.scala
+2023.05.02 15:34:51 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\InstructionMemory.scala
+2023.05.02 15:35:02 INFO  no build target found for C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.2.2
+2023.05.02 15:35:08 INFO  time: code lens generation in 14s
+2023.05.02 15:35:08 INFO  time: code lens generation in 8.48s
+2023.05.02 15:35:24 INFO  Shutting down server
+2023.05.02 15:35:24 INFO  shutting down Metals
+2023.05.02 15:35:24 INFO  Exiting server

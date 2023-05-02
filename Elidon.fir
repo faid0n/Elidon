@@ -2,16 +2,43 @@ circuit Elidon :
   module InstructionMemory :
     input clock : Clock
     input reset : Reset
+    output io : { flip pc : UInt<8>, instruction : UInt<16>}
 
-    skip
+    wire rom : UInt<16>[20] @[InstructionMemory.scala 13:20]
+    rom[0] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[1] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[2] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[3] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[4] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[5] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[6] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[7] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[8] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[9] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[10] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[11] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[12] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[13] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[14] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[15] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[16] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[17] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[18] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[19] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    node _io_instruction_T = bits(io.pc, 7, 1) @[InstructionMemory.scala 14:30]
+    node _io_instruction_T_1 = bits(_io_instruction_T, 4, 0)
+    io.instruction <= rom[_io_instruction_T_1] @[InstructionMemory.scala 14:18]
 
   module FetchStage :
     input clock : Clock
     input reset : Reset
 
-    inst instructionMemory of InstructionMemory @[FetchStage.scala 7:33]
+    reg pcReg : UInt<16>, clock with :
+      reset => (reset, UInt<16>("h0")) @[FetchStage.scala 9:22]
+    inst instructionMemory of InstructionMemory @[FetchStage.scala 11:33]
     instructionMemory.clock <= clock
     instructionMemory.reset <= reset
+    instructionMemory.io.pc <= pcReg @[FetchStage.scala 12:27]
 
   module DecodeStage :
     input clock : Clock
@@ -22,16 +49,43 @@ circuit Elidon :
   module InstructionMemory_1 :
     input clock : Clock
     input reset : Reset
+    output io : { flip pc : UInt<8>, instruction : UInt<16>}
 
-    skip
+    wire rom : UInt<16>[20] @[InstructionMemory.scala 13:20]
+    rom[0] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[1] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[2] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[3] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[4] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[5] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[6] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[7] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[8] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[9] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[10] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[11] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[12] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[13] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[14] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[15] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[16] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[17] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[18] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    rom[19] <= UInt<16>("h8000") @[InstructionMemory.scala 13:20]
+    node _io_instruction_T = bits(io.pc, 7, 1) @[InstructionMemory.scala 14:30]
+    node _io_instruction_T_1 = bits(_io_instruction_T, 4, 0)
+    io.instruction <= rom[_io_instruction_T_1] @[InstructionMemory.scala 14:18]
 
   module FetchStage_1 :
     input clock : Clock
     input reset : Reset
 
-    inst instructionMemory of InstructionMemory_1 @[FetchStage.scala 7:33]
+    reg pcReg : UInt<16>, clock with :
+      reset => (reset, UInt<16>("h0")) @[FetchStage.scala 9:22]
+    inst instructionMemory of InstructionMemory_1 @[FetchStage.scala 11:33]
     instructionMemory.clock <= clock
     instructionMemory.reset <= reset
+    instructionMemory.io.pc <= pcReg @[FetchStage.scala 12:27]
 
   module MemoryStage :
     input clock : Clock
