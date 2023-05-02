@@ -4,5 +4,7 @@ import chisel3.util._
 class FetchStage extends Module {
   // val io = IO(new Bundle {
   // })
-  val instructionMemory = Module(new InstructionMemory)
+  // val pcReg = Vec(RegInit()
+
+  // val instructionMemory = Vec()
 }
