@@ -1,6 +1,7 @@
 import chisel3._
 import chisel3.util._
 
+
 class DataMemory extends Module {
   val io = IO(new Bundle {
     val data = new Bundle {
@@ -18,7 +19,7 @@ class DataMemory extends Module {
 
   /********************************************************
   * We split the memory into 2 parts because we want to handle
-  * 16 bit words, with byte adressing and also missaligned adresses
+  * 16 bit UInt(16.W)s, with byte adressing and also missaligned adresses
   ********************************************************/
   val evenMem = SyncReadMem(2^15, UInt(8.W))
   val oddMem = SyncReadMem(2^15, UInt(8.W))
@@ -75,27 +76,27 @@ class DataMemory extends Module {
 
   /********************************************************
   * Add IO functionality:
-  * Bytes 0, 1: LEDs
-  * Bytes 2, 3: Hex values of 7-segment display
-  * Bytes 4, 5: Input from switches
+  * UInt(8.W)s 0, 1: LEDs
+  * UInt(8.W)s 2, 3: Hex values of 7-segment display
+  * UInt(8.W)s 4, 5: Input from switches
   ********************************************************/
   // Store the values in registers
-  val ledsReg = RegInit(0.U(16.W))
-  val displayValueReg = RegInit(0.U(16.W))
-  val switchesReg = RegNext(io.switches)
+  val leds = RegInit(0.U(16.W))
+  val displayValue = RegInit(0.U(16.W))
+  val switches = RegNext(io.switches)
 
   // Connect with IO
-  io.leds := ledsReg
-  io.displayValue := displayValueReg
+  io.leds := leds
+  io.displayValue := displayValue
 
   // Set leds and displayValue on write
   // They can only be set when adress is aligned
   when(io.data.writeEnable) {
     when(io.data.writeAdress === 0.U) {
-      ledsReg := io.data.writeValue
+      leds := io.data.writeValue
     }
     when(io.data.writeAdress === 2.U) {
-      displayValueReg := io.data.writeValue
+      displayValue := io.data.writeValue
     }
   } 
 
@@ -104,7 +105,7 @@ class DataMemory extends Module {
   ********************************************************/
 
   when(io.data.readAdress === 4.U) {  // Switches's value is only acessed when it's aligned:
-    io.data.readValue := switchesReg
+    io.data.readValue := switches
   } .elsewhen(io.data.readAdress === io.data.writeAdress) { // Forward value if adresses same
     io.data.readValue := io.data.writeValue
   } .otherwise {

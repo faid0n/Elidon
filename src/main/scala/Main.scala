@@ -18,6 +18,12 @@ class Elidon extends Module {
   val memoryStage = Module(new MemoryStage)
   val writeBackStage = Module(new WriteBackStage)
 
+  // Connect stage pipelines:
+  fetchStage.io.f2d <> decodeStage.io.f2d
+
+  // Connect other stage communications
+  fetchStage.io.branch <> executeStage.io.branch
+
   // Initialise communication of Memory stage with data segment
   val dataMemory = Module(new DataMemory)
   memoryStage.io.data <> dataMemory.io.data
