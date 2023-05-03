@@ -1,0 +1,16 @@
+lui, I, 8
+lli,  I, 9
+bez, I, A
+jr, R,  B
+jalr, R, C
+lw, mI, D
+sw, mI, E
+j, J, F
+and,R, 0
+nor,R, 1
+add,R,  2
+sub, R, 3
+sla, R,  4
+slt, R, 5
+div, R, 6
+mul, R, 7

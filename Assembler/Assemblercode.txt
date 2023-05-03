@@ -1,0 +1,6 @@
+add $t1, $t2, $t3
+add $t1, $t2, $t4
+Begin:
+lui $t3, 222
+sw $s2, 15($t1)
+j Begin
