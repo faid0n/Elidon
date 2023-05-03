@@ -1,99 +1,19 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala:8:23: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m      val pc = Output(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala:8:22: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m      val pc = Input(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                     ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala:11:23: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m      val pc = Output(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala:12:32: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m      val instruction = Output(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                               ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\InstructionMemory.scala:6:20: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m    val pc = Input(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\InstructionMemory.scala:7:30: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m    val instruction = Output(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                             ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory Stage\MemoryStage.scala:7:31: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m      val readAdress = Output(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                              ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory Stage\MemoryStage.scala:8:32: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m      val writeAdress = Output(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                               ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory Stage\MemoryStage.scala:10:31: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m      val writeValue = Output(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                              ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory Stage\MemoryStage.scala:11:29: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m      val readValue = Input(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                            ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:7:30: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m      val readAdress = Input(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                             ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:8:31: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m      val writeAdress = Input(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                              ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:10:30: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m      val writeValue = Input(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                             ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:11:30: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m      val readValue = Output(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                             ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:14:23: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m    val leds = Output(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:15:31: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m    val displayValue = Output(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                              ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:16:26: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m    val switches = Input(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                         ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DisplayMultiplexer.scala:6:23: not found: value UInt(16.W)[0m
-[0m[[0m[31merror[0m] [0m[0m    val value = Input(UInt(16.W))[0m
-[0m[[0m[31merror[0m] [0m[0m                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:23:17: overloaded method value apply with alternatives:[0m
-[0m[[0m[31merror[0m] [0m[0m  [T <: chisel3.Data](size: Int, t: T)chisel3.SyncReadMem[T] <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  [T <: chisel3.Data](size: BigInt, t: T)chisel3.SyncReadMem[T][0m
-[0m[[0m[31merror[0m] [0m[0m cannot be applied to (Int, Byte.type)[0m
-[0m[[0m[31merror[0m] [0m[0m  val evenMem = SyncReadMem(2^15, Byte)[0m
-[0m[[0m[31merror[0m] [0m[0m                ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:24:16: overloaded method value apply with alternatives:[0m
-[0m[[0m[31merror[0m] [0m[0m  [T <: chisel3.Data](size: Int, t: T)chisel3.SyncReadMem[T] <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  [T <: chisel3.Data](size: BigInt, t: T)chisel3.SyncReadMem[T][0m
-[0m[[0m[31merror[0m] [0m[0m cannot be applied to (Int, Byte.type)[0m
-[0m[[0m[31merror[0m] [0m[0m  val oddMem = SyncReadMem(2^15, Byte)[0m
-[0m[[0m[31merror[0m] [0m[0m               ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:40:20: value := is not a member of object Byte[0m
-[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because receiver is not assignable.[0m
-[0m[[0m[31merror[0m] [0m[0m    readBundle.msB := evenMem.read(readAdressOdd)[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:41:20: value := is not a member of object Byte[0m
-[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because receiver is not assignable.[0m
-[0m[[0m[31merror[0m] [0m[0m    readBundle.lsB := oddMem.read(readAdressEven)[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:44:20: value := is not a member of object Byte[0m
-[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because receiver is not assignable.[0m
-[0m[[0m[31merror[0m] [0m[0m    readBundle.msB := evenMem.read(readAdressEven)[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:45:20: value := is not a member of object Byte[0m
-[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because receiver is not assignable.[0m
-[0m[[0m[31merror[0m] [0m[0m    readBundle.lsB := oddMem.read(readAdressOdd)[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:62:22: value := is not a member of object Byte[0m
-[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because receiver is not assignable.[0m
-[0m[[0m[31merror[0m] [0m[0m    writeBundle.even := io.data.writeValue(7, 0)[0m
-[0m[[0m[31merror[0m] [0m[0m                     ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:63:21: value := is not a member of object Byte[0m
-[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because receiver is not assignable.[0m
-[0m[[0m[31merror[0m] [0m[0m    writeBundle.odd := io.data.writeValue(15, 8)[0m
-[0m[[0m[31merror[0m] [0m[0m                    ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:66:22: value := is not a member of object Byte[0m
-[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because receiver is not assignable.[0m
-[0m[[0m[31merror[0m] [0m[0m    writeBundle.even := io.data.writeValue(15, 8)[0m
-[0m[[0m[31merror[0m] [0m[0m                     ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala:67:21: value := is not a member of object Byte[0m
-[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because receiver is not assignable.[0m
-[0m[[0m[31merror[0m] [0m[0m    writeBundle.odd := io.data.writeValue(7, 0)[0m
-[0m[[0m[31merror[0m] [0m[0m                    ^[0m
-[0m[[0m[31merror[0m] [0m[0m28 errors found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala:6:5: overloaded method value apply with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (idx: Int)chisel3.UInt <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (p: chisel3.UInt)chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (Int, Int)[0m
+[0m[[0m[31merror[0m] [0m[0m    b(3, 0) := a[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala:13:5: overloaded method value apply with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (idx: Int)chisel3.UInt <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (p: chisel3.UInt)chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (Int, Int)[0m
+[0m[[0m[31merror[0m] [0m[0m    b(7, 0) := a[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala:20:5: overloaded method value apply with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (idx: Int)chisel3.UInt <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (p: chisel3.UInt)chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (Int, Int)[0m
+[0m[[0m[31merror[0m] [0m[0m    b(11, 0) := a[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m

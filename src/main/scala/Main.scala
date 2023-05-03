@@ -14,15 +14,19 @@ class Elidon extends Module {
   // Initialise Pipeline Stages
   val fetchStage = Module(new FetchStage)
   val decodeStage = Module(new DecodeStage)
-  val executeStage = Module(new FetchStage)
+  val executeStage = Module(new ExecuteStage)
   val memoryStage = Module(new MemoryStage)
   val writeBackStage = Module(new WriteBackStage)
 
   // Connect stage pipelines:
   fetchStage.io.f2d <> decodeStage.io.f2d
+  decodeStage.io.d2e <> executeStage.io.d2e
 
   // Connect other stage communications
-  fetchStage.io.branch <> executeStage.io.branch
+  // TODO figure out why this does't work and replace the 2 lines below
+    // fetchStage.io.branch <> executeStage.io.branch
+  fetchStage.io.branch.enable := executeStage.io.branch.enable
+  fetchStage.io.branch.pc := executeStage.io.branch.pc
 
   // Initialise communication of Memory stage with data segment
   val dataMemory = Module(new DataMemory)

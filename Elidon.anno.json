@@ -1,35 +1,5 @@
 [
   {
-    "class":"firrtl.transforms.DedupedResult",
-    "original":"~Elidon|InstructionMemory",
-    "index":-1.0
-  },
-  {
-    "class":"firrtl.transforms.DedupedResult",
-    "original":"~Elidon|FetchStage",
-    "index":-1.0
-  },
-  {
-    "class":"firrtl.transforms.DedupedResult",
-    "original":"~Elidon|DecodeStage",
-    "index":-1.0
-  },
-  {
-    "class":"firrtl.transforms.DedupedResult",
-    "original":"~Elidon|InstructionMemory_1",
-    "index":-1.0
-  },
-  {
-    "class":"firrtl.transforms.DedupedResult",
-    "original":"~Elidon|FetchStage_1",
-    "index":-1.0
-  },
-  {
-    "class":"firrtl.transforms.DedupedResult",
-    "original":"~Elidon|WriteBackStage",
-    "index":-1.0
-  },
-  {
     "class":"firrtl.EmitCircuitAnnotation",
     "emitter":"firrtl.VerilogEmitter"
   },
