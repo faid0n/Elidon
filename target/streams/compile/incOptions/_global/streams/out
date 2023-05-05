@@ -1,2 +1,57 @@
 [0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\target\scala-2.12\classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FetchStage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ExecuteStage$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	DecodeStage$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	DecodeStage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FetchStage$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ExecuteStage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	F2DIO.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FetchStage$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	D2EIO.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ExecuteStage$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FetchStage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ExecuteStage$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	DecodeStage$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	DecodeStage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FetchStage$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ExecuteStage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	F2DIO.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FetchStage$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	D2EIO.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ExecuteStage$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	E2M.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FetchStage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ExecuteStage$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	DecodeStage$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	D2E.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	DecodeStage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FetchStage$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ExecuteStage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FetchStage$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ExecuteStage$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	F2D.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Elidon$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Elidon$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Elidon.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Elidon$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Elidon$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Elidon.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Elidon$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Elidon$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Elidon.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\target\scala-2.12\classes.bak[0m

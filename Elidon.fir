@@ -80,35 +80,26 @@ circuit Elidon :
     reg registerFile : UInt<16>[16], clock with :
       reset => (reset, _registerFile_WIRE) @[DecodeStage.scala 17:29]
     node opcode = bits(io.f2d.instruction, 15, 12) @[DecodeStage.scala 21:27]
-    reg d2eReg_pc : UInt, clock with :
-      reset => (UInt<1>("h0"), d2eReg_pc) @[DecodeStage.scala 23:26]
-    d2eReg_pc <= io.f2d.pc @[DecodeStage.scala 23:26]
-    reg d2eReg_instruction : UInt, clock with :
-      reset => (UInt<1>("h0"), d2eReg_instruction) @[DecodeStage.scala 24:35]
-    d2eReg_instruction <= io.f2d.instruction @[DecodeStage.scala 24:35]
-    node _d2eReg_rs1_T = bits(opcode, 3, 3) @[DecodeStage.scala 25:51]
-    node _d2eReg_rs1_T_1 = bits(io.f2d.instruction, 7, 4) @[DecodeStage.scala 25:67]
-    node _d2eReg_rs1_T_2 = bits(io.f2d.instruction, 11, 8) @[DecodeStage.scala 25:86]
-    node _d2eReg_rs1_T_3 = mux(_d2eReg_rs1_T, _d2eReg_rs1_T_1, _d2eReg_rs1_T_2) @[DecodeStage.scala 25:44]
-    reg d2eReg_rs1 : UInt, clock with :
-      reset => (UInt<1>("h0"), d2eReg_rs1) @[DecodeStage.scala 25:27]
-    d2eReg_rs1 <= registerFile[_d2eReg_rs1_T_3] @[DecodeStage.scala 25:27]
-    node _d2eReg_rs2_T = bits(io.f2d.instruction, 3, 0) @[DecodeStage.scala 26:52]
-    reg d2eReg_rs2 : UInt, clock with :
-      reset => (UInt<1>("h0"), d2eReg_rs2) @[DecodeStage.scala 26:27]
-    d2eReg_rs2 <= registerFile[_d2eReg_rs2_T] @[DecodeStage.scala 26:27]
-    io.d2e.pc <= d2eReg_pc @[DecodeStage.scala 29:13]
-    io.d2e.instruction <= d2eReg_instruction @[DecodeStage.scala 30:22]
-    io.d2e.rs1 <= d2eReg_rs1 @[DecodeStage.scala 31:14]
-    io.d2e.rs2 <= d2eReg_rs2 @[DecodeStage.scala 32:14]
+    reg d2eReg : { pc : UInt<16>, instruction : UInt<16>, rs1 : UInt<16>, rs2 : UInt<16>}, clock with :
+      reset => (UInt<1>("h0"), d2eReg) @[DecodeStage.scala 24:19]
+    io.d2e <= d2eReg @[DecodeStage.scala 25:10]
+    d2eReg.pc <= io.f2d.pc @[DecodeStage.scala 26:13]
+    d2eReg.instruction <= io.f2d.instruction @[DecodeStage.scala 27:22]
+    node _d2eReg_rs1_T = bits(opcode, 3, 3) @[DecodeStage.scala 28:40]
+    node _d2eReg_rs1_T_1 = bits(io.f2d.instruction, 7, 4) @[DecodeStage.scala 28:56]
+    node _d2eReg_rs1_T_2 = bits(io.f2d.instruction, 11, 8) @[DecodeStage.scala 28:75]
+    node _d2eReg_rs1_T_3 = mux(_d2eReg_rs1_T, _d2eReg_rs1_T_1, _d2eReg_rs1_T_2) @[DecodeStage.scala 28:33]
+    d2eReg.rs1 <= registerFile[_d2eReg_rs1_T_3] @[DecodeStage.scala 28:14]
+    node _d2eReg_rs2_T = bits(io.f2d.instruction, 3, 0) @[DecodeStage.scala 29:41]
+    d2eReg.rs2 <= registerFile[_d2eReg_rs2_T] @[DecodeStage.scala 29:14]
 
   module ExecuteStage :
     input clock : Clock
     input reset : Reset
     output io : { branch : { enable : UInt<1>, pc : UInt<16>}, flip d2e : { pc : UInt<16>, instruction : UInt<16>, rs1 : UInt<16>, rs2 : UInt<16>}}
 
-    io.branch.enable <= UInt<1>("h0") @[ExecuteStage.scala 14:20]
-    io.branch.pc <= UInt<1>("h0") @[ExecuteStage.scala 15:16]
+    io.branch.enable <= UInt<1>("h0") @[ExecuteStage.scala 21:20]
+    io.branch.pc <= UInt<1>("h0") @[ExecuteStage.scala 22:16]
 
   module MemoryStage :
     input clock : Clock

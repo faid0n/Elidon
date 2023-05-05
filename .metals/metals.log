@@ -869,3 +869,535 @@ May 03, 2023 12:40:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancella
 WARNING: Unmatched cancel notification for request id 5055
 2023.05.03 12:40:53 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
 2023.05.03 12:42:16 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 13:41:12 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 13:42:37 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\Assembler.scala
+May 03, 2023 1:44:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5374
+May 03, 2023 1:44:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5435
+May 03, 2023 1:44:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5464
+May 03, 2023 1:45:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5512
+May 03, 2023 1:45:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5531
+2023.05.03 13:45:16 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+2023.05.03 13:45:18 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+2023.05.03 13:45:48 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 1:46:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5627
+2023.05.03 13:47:15 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+May 03, 2023 1:47:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5745
+May 03, 2023 1:48:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5787
+May 03, 2023 1:48:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5832
+2023.05.03 13:48:54 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 13:50:29 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 13:50:47 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 1:51:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6201
+May 03, 2023 1:52:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6388
+May 03, 2023 1:53:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6456
+2023.05.03 13:53:36 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 1:54:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6542
+2023.05.03 13:54:35 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 13:57:53 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 13:58:02 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:02:19 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:02:31 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:06:02 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\Opcode.scala
+2023.05.03 14:06:09 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\Opcode.scala
+May 03, 2023 2:07:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6916
+May 03, 2023 2:07:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6942
+May 03, 2023 2:07:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7071
+2023.05.03 14:08:09 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\Opcode.scala
+2023.05.03 14:09:58 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 2:10:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7172
+2023.05.03 14:10:41 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 2:12:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7210
+May 03, 2023 2:12:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7219
+May 03, 2023 2:12:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7227
+May 03, 2023 2:13:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7375
+May 03, 2023 2:13:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7423
+May 03, 2023 2:14:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7430
+2023.05.03 14:14:05 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:15:41 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 2:17:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7779
+May 03, 2023 2:17:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7808
+May 03, 2023 2:17:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7841
+2023.05.03 14:18:34 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:19:48 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:21:11 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:22:50 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 2:26:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8092
+May 03, 2023 2:26:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8168
+2023.05.03 14:26:52 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\Opcode.scala
+2023.05.03 14:27:08 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:27:13 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:27:21 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 2:27:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8315
+May 03, 2023 2:28:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8387
+2023.05.03 14:28:40 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:28:55 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:28:58 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:29:31 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:34:38 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:36:40 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:37:11 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 2:37:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8681
+2023.05.03 14:37:19 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 2:37:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8752
+2023.05.03 14:37:35 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:37:46 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:38:10 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 2:38:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8872
+May 03, 2023 2:38:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8953
+2023.05.03 14:39:05 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:46:12 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 2:47:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9174
+2023.05.03 14:48:03 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:49:39 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:51:53 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:52:11 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\build.sbt
+2023.05.03 14:54:20 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:56:11 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+2023.05.03 14:56:30 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 14:59:45 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+2023.05.03 15:00:26 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 15:01:27 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+2023.05.03 15:02:01 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+May 03, 2023 3:16:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9615
+May 03, 2023 3:16:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9683
+May 03, 2023 3:16:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9727
+May 03, 2023 3:17:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9750
+2023.05.03 15:17:32 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+May 03, 2023 3:19:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10095
+May 03, 2023 3:19:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10131
+May 03, 2023 3:19:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10142
+May 03, 2023 3:19:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10172
+May 03, 2023 3:19:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10229
+May 03, 2023 3:19:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10235
+2023.05.03 15:20:17 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 3:20:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10484
+May 03, 2023 3:21:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10501
+May 03, 2023 3:21:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10520
+2023.05.03 15:22:12 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 15:22:35 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 3:23:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10716
+2023.05.03 15:23:20 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 15:25:54 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala
+2023.05.03 15:26:38 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\F2dIO.scala
+May 03, 2023 3:26:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10761
+May 03, 2023 3:26:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10793
+May 03, 2023 3:26:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10809
+2023.05.03 15:26:53 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\F2dIO.scala
+2023.05.03 15:27:16 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\F2DIO.scala
+2023.05.03 15:27:23 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\F2DIO.scala
+2023.05.03 15:27:43 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\F2DIO.scala
+May 03, 2023 3:28:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10939
+2023.05.03 15:28:31 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\F2DIO.scala
+2023.05.03 15:28:47 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+May 03, 2023 3:29:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 11065
+May 03, 2023 3:29:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 11085
+2023.05.03 15:30:04 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\D2EIO.scala
+May 03, 2023 3:31:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 11277
+2023.05.03 15:31:13 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala
+2023.05.03 15:31:17 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\D2EIO.scala
+2023.05.03 15:31:19 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 15:32:14 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala
+2023.05.03 15:32:15 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\SevenSegDec.scala
+2023.05.03 15:32:16 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DisplayMultiplexer.scala
+2023.05.03 15:32:17 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala
+2023.05.03 15:32:20 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DisplayMultiplexer.scala
+2023.05.03 15:32:20 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\SevenSegDec.scala
+2023.05.03 15:32:22 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DisplayMultiplexer.scala
+2023.05.03 15:32:24 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\SevenSegDec.scala
+2023.05.03 15:32:31 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DisplayMultiplexer.scala
+2023.05.03 15:32:37 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DisplayMultiplexer.scala
+2023.05.03 15:32:39 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\SevenSegDec.scala
+2023.05.03 15:32:44 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\DataMemory.scala
+2023.05.03 15:33:43 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory and IO\StageIO.scala
+2023.05.03 15:34:06 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\F2DIO.scala
+2023.05.03 15:34:06 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+2023.05.03 15:34:17 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 15:34:21 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\D2EIO.scala
+2023.05.03 16:03:31 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:04:22 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:04:47 WARN  Using indexes to guess the definition of Opcode
+2023.05.03 16:04:47 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:06:30 WARN  Using indexes to guess the definition of Opcode
+2023.05.03 16:06:46 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 4:06:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 11702
+May 03, 2023 4:06:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 11700
+May 03, 2023 4:06:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 11711
+2023.05.03 16:06:51 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:06:58 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:07:11 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:07:55 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:08:01 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:08:06 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:08:11 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:08:15 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:08:20 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:08:26 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:08:31 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:08:36 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:08:52 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:11:19 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:12:13 WARN  Using indexes to guess the definition of Opcode
+May 03, 2023 4:14:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 12325
+2023.05.03 16:14:38 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:15:57 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 4:16:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 12568
+May 03, 2023 4:17:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 12652
+2023.05.03 16:17:39 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:17:44 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:22:05 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 4:25:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 12766
+2023.05.03 16:26:10 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory, IO, util\DataMemory.scala
+2023.05.03 16:26:10 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory, IO, util\DisplayMultiplexer.scala
+2023.05.03 16:26:44 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory, IO, util\SignExtend.scala
+2023.05.03 16:30:44 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory, IO, util\SignExtend.scala
+2023.05.03 16:30:45 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:31:14 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Digital Electronics 2\vending-machine\src\main\scala\ButtonTick.scala
+May 03, 2023 4:32:14 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: 0
+java.lang.IndexOutOfBoundsException: 0
+	at scala.collection.LinearSeqOps.apply(LinearSeq.scala:131)
+	at scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	at scala.collection.immutable.List.apply(List.scala:79)
+	at dotty.tools.dotc.util.Signatures$.countParams(Signatures.scala:501)
+	at dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:186)
+	at dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:94)
+	at dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:63)
+	at scala.meta.internal.pc.MetalsSignatures$.signatures(MetalsSignatures.scala:21)
+	at scala.meta.internal.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:51)
+
+May 03, 2023 4:32:30 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: 0
+java.lang.IndexOutOfBoundsException: 0
+	at scala.collection.LinearSeqOps.apply(LinearSeq.scala:131)
+	at scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	at scala.collection.immutable.List.apply(List.scala:79)
+	at dotty.tools.dotc.util.Signatures$.countParams(Signatures.scala:501)
+	at dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:186)
+	at dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:94)
+	at dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:63)
+	at scala.meta.internal.pc.MetalsSignatures$.signatures(MetalsSignatures.scala:21)
+	at scala.meta.internal.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:51)
+
+May 03, 2023 4:32:39 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: sourcecode/Name
+java.lang.NoClassDefFoundError: sourcecode/Name
+	at scala.meta.internal.tokenizers.XmlParser$Xml$.UnpStart(XmlParser.scala:48)
+	at scala.meta.internal.tokenizers.XmlParser$Xml$.Unparsed(XmlParser.scala:47)
+	at scala.meta.internal.tokenizers.XmlParser$Xml$.XmlContent(XmlParser.scala:43)
+	at scala.meta.internal.tokenizers.XmlParser.$anonfun$XmlExpr$1(XmlParser.scala:24)
+	at scala.meta.internal.fastparse.internal.RepImpls$.rec$4(RepImpls.scala:358)
+	at scala.meta.internal.fastparse.internal.RepImpls$.rep$extension(RepImpls.scala:398)
+	at scala.meta.internal.fastparse.package$ByNameOps$.rep$extension(package.scala:271)
+	at scala.meta.internal.tokenizers.XmlParser.XmlExpr(XmlParser.scala:24)
+	at scala.meta.internal.tokenizers.LegacyScanner.$anonfun$getXml$2(LegacyScanner.scala:968)
+	at scala.meta.internal.fastparse.package$.parseInputRaw(package.scala:71)
+	at scala.meta.internal.fastparse.Parsed$Extra.trace(Parsed.scala:141)
+	at scala.meta.internal.fastparse.Parsed$Extra.traced(Parsed.scala:120)
+	at scala.meta.internal.tokenizers.LegacyScanner.getXml(LegacyScanner.scala:972)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchLT$1(LegacyScanner.scala:330)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:338)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:246)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1047)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.pc.completions.KeywordsCompletions$.reverseTokens$lzyINIT1$1(KeywordsCompletions.scala:50)
+	at scala.meta.internal.pc.completions.KeywordsCompletions$.reverseTokens$1(KeywordsCompletions.scala:54)
+	at scala.meta.internal.pc.completions.KeywordsCompletions$.contribute(KeywordsCompletions.scala:56)
+	at scala.meta.internal.pc.completions.Completions.completions(Completions.scala:191)
+	at scala.meta.internal.pc.completions.CompletionProvider.completions(CompletionProvider.scala:86)
+Caused by: java.lang.ClassNotFoundException: sourcecode.Name
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 29 more
+
+May 03, 2023 4:32:40 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: sourcecode/Name
+java.lang.NoClassDefFoundError: sourcecode/Name
+	at scala.meta.internal.tokenizers.XmlParser$Xml$.UnpStart(XmlParser.scala:48)
+	at scala.meta.internal.tokenizers.XmlParser$Xml$.Unparsed(XmlParser.scala:47)
+	at scala.meta.internal.tokenizers.XmlParser$Xml$.XmlContent(XmlParser.scala:43)
+	at scala.meta.internal.tokenizers.XmlParser.$anonfun$XmlExpr$1(XmlParser.scala:24)
+	at scala.meta.internal.fastparse.internal.RepImpls$.rec$4(RepImpls.scala:358)
+	at scala.meta.internal.fastparse.internal.RepImpls$.rep$extension(RepImpls.scala:398)
+	at scala.meta.internal.fastparse.package$ByNameOps$.rep$extension(package.scala:271)
+	at scala.meta.internal.tokenizers.XmlParser.XmlExpr(XmlParser.scala:24)
+	at scala.meta.internal.tokenizers.LegacyScanner.$anonfun$getXml$2(LegacyScanner.scala:968)
+	at scala.meta.internal.fastparse.package$.parseInputRaw(package.scala:71)
+	at scala.meta.internal.fastparse.Parsed$Extra.trace(Parsed.scala:141)
+	at scala.meta.internal.fastparse.Parsed$Extra.traced(Parsed.scala:120)
+	at scala.meta.internal.tokenizers.LegacyScanner.getXml(LegacyScanner.scala:972)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchLT$1(LegacyScanner.scala:330)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:338)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:246)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1047)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.pc.completions.KeywordsCompletions$.reverseTokens$lzyINIT1$1(KeywordsCompletions.scala:50)
+	at scala.meta.internal.pc.completions.KeywordsCompletions$.reverseTokens$1(KeywordsCompletions.scala:54)
+	at scala.meta.internal.pc.completions.KeywordsCompletions$.contribute(KeywordsCompletions.scala:56)
+	at scala.meta.internal.pc.completions.Completions.completions(Completions.scala:191)
+	at scala.meta.internal.pc.completions.CompletionProvider.completions(CompletionProvider.scala:86)
+
+May 03, 2023 4:32:41 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: sourcecode/Name
+java.lang.NoClassDefFoundError: sourcecode/Name
+	at scala.meta.internal.tokenizers.XmlParser$Xml$.UnpStart(XmlParser.scala:48)
+	at scala.meta.internal.tokenizers.XmlParser$Xml$.Unparsed(XmlParser.scala:47)
+	at scala.meta.internal.tokenizers.XmlParser$Xml$.XmlContent(XmlParser.scala:43)
+	at scala.meta.internal.tokenizers.XmlParser.$anonfun$XmlExpr$1(XmlParser.scala:24)
+	at scala.meta.internal.fastparse.internal.RepImpls$.rec$4(RepImpls.scala:358)
+	at scala.meta.internal.fastparse.internal.RepImpls$.rep$extension(RepImpls.scala:398)
+	at scala.meta.internal.fastparse.package$ByNameOps$.rep$extension(package.scala:271)
+	at scala.meta.internal.tokenizers.XmlParser.XmlExpr(XmlParser.scala:24)
+	at scala.meta.internal.tokenizers.LegacyScanner.$anonfun$getXml$2(LegacyScanner.scala:968)
+	at scala.meta.internal.fastparse.package$.parseInputRaw(package.scala:71)
+	at scala.meta.internal.fastparse.Parsed$Extra.trace(Parsed.scala:141)
+	at scala.meta.internal.fastparse.Parsed$Extra.traced(Parsed.scala:120)
+	at scala.meta.internal.tokenizers.LegacyScanner.getXml(LegacyScanner.scala:972)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchLT$1(LegacyScanner.scala:330)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:338)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:246)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1047)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.pc.completions.KeywordsCompletions$.reverseTokens$lzyINIT1$1(KeywordsCompletions.scala:50)
+	at scala.meta.internal.pc.completions.KeywordsCompletions$.reverseTokens$1(KeywordsCompletions.scala:54)
+	at scala.meta.internal.pc.completions.KeywordsCompletions$.contribute(KeywordsCompletions.scala:56)
+	at scala.meta.internal.pc.completions.Completions.completions(Completions.scala:191)
+	at scala.meta.internal.pc.completions.CompletionProvider.completions(CompletionProvider.scala:86)
+
+2023.05.03 16:32:44 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory, IO, util\SignExtend.scala
+May 03, 2023 4:32:56 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: 0
+java.lang.IndexOutOfBoundsException: 0
+	at scala.collection.LinearSeqOps.apply(LinearSeq.scala:131)
+	at scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	at scala.collection.immutable.List.apply(List.scala:79)
+	at dotty.tools.dotc.util.Signatures$.countParams(Signatures.scala:501)
+	at dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:186)
+	at dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:94)
+	at dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:63)
+	at scala.meta.internal.pc.MetalsSignatures$.signatures(MetalsSignatures.scala:21)
+	at scala.meta.internal.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:51)
+
+May 03, 2023 4:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 13617
+May 03, 2023 4:33:16 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: 0
+java.lang.IndexOutOfBoundsException: 0
+	at scala.collection.LinearSeqOps.apply(LinearSeq.scala:131)
+	at scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	at scala.collection.immutable.List.apply(List.scala:79)
+	at dotty.tools.dotc.util.Signatures$.countParams(Signatures.scala:501)
+	at dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:186)
+	at dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:94)
+	at dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:63)
+	at scala.meta.internal.pc.MetalsSignatures$.signatures(MetalsSignatures.scala:21)
+	at scala.meta.internal.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:51)
+
+May 03, 2023 4:33:17 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: 0
+java.lang.IndexOutOfBoundsException: 0
+	at scala.collection.LinearSeqOps.apply(LinearSeq.scala:131)
+	at scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	at scala.collection.immutable.List.apply(List.scala:79)
+	at dotty.tools.dotc.util.Signatures$.countParams(Signatures.scala:501)
+	at dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:186)
+	at dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:94)
+	at dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:63)
+	at scala.meta.internal.pc.MetalsSignatures$.signatures(MetalsSignatures.scala:21)
+	at scala.meta.internal.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:51)
+
+2023.05.03 16:34:58 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory, IO, util\SignExtend.scala
+2023.05.03 16:35:10 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory, IO, util\SignExtend.scala
+2023.05.03 16:35:32 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory, IO, util\SignExtend.scala
+2023.05.03 16:37:44 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory, IO, util\SignExtend.scala
+2023.05.03 16:38:11 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory, IO, util\SignExtend.scala
+2023.05.03 16:39:12 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:41:00 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:41:14 WARN  Using indexes to guess the definition of Opcode
+May 03, 2023 4:43:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 14400
+May 03, 2023 4:43:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 14450
+2023.05.03 16:43:59 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:47:13 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:50:20 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 4:51:27 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: 0
+java.lang.IndexOutOfBoundsException: 0
+	at scala.collection.LinearSeqOps.apply(LinearSeq.scala:131)
+	at scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	at scala.collection.immutable.List.apply(List.scala:79)
+	at dotty.tools.dotc.util.Signatures$.countParams(Signatures.scala:501)
+	at dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:186)
+	at dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:94)
+	at dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:63)
+	at scala.meta.internal.pc.MetalsSignatures$.signatures(MetalsSignatures.scala:21)
+	at scala.meta.internal.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:51)
+
+2023.05.03 16:51:32 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 16:52:36 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\Assembler.scala
+2023.05.03 16:53:06 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\GetMachineCode.scala
+2023.05.03 16:54:45 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\InstructionMemory.scala
+2023.05.03 16:55:38 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory Stage\DataMemory.scala
+2023.05.03 16:55:40 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory Stage\DisplayMultiplexer.scala
+2023.05.03 16:55:47 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\SignExtend.scala
+2023.05.03 16:56:20 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\InstructionMemory.scala
+May 03, 2023 4:58:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 15645
+May 03, 2023 5:04:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 15823
+2023.05.03 17:04:41 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Main.scala
+2023.05.03 17:04:43 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala
+2023.05.03 17:04:44 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:05:36 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 5:08:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 16154
+2023.05.03 17:08:22 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 5:08:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 16213
+2023.05.03 17:08:59 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:09:55 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:19:19 WARN  Using indexes to guess the definition of Opcode
+2023.05.03 17:19:19 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 5:20:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 16594
+2023.05.03 17:22:36 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:23:11 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:23:17 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:23:38 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:23:47 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:24:28 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:24:56 WARN  Using indexes to guess the definition of Opcode
+2023.05.03 17:24:56 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:26:25 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:34:35 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:35:26 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:36:48 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:36:56 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:37:03 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 5:37:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17951
+2023.05.03 17:37:39 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala
+2023.05.03 17:37:47 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala
+2023.05.03 17:39:44 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.03 17:39:58 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala
+2023.05.03 17:40:39 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala
+2023.05.03 17:40:41 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala
+May 03, 2023 5:40:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:686)
+	at java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2014)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:469)
+	at scala.meta.internal.metals.MetalsLspService.executeCommand(MetalsLspService.scala:2031)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2023.05.03 17:53:07 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala
+2023.05.03 17:54:29 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala
+2023.05.03 17:56:48 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Main.scala
+2023.05.03 17:58:39 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Main.scala

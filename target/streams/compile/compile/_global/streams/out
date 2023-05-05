@@ -1,19 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala:6:5: overloaded method value apply with alternatives:[0m
-[0m[[0m[31merror[0m] [0m[0m  (idx: Int)chisel3.UInt <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (p: chisel3.UInt)chisel3.UInt[0m
-[0m[[0m[31merror[0m] [0m[0m cannot be applied to (Int, Int)[0m
-[0m[[0m[31merror[0m] [0m[0m    b(3, 0) := a[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala:13:5: overloaded method value apply with alternatives:[0m
-[0m[[0m[31merror[0m] [0m[0m  (idx: Int)chisel3.UInt <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (p: chisel3.UInt)chisel3.UInt[0m
-[0m[[0m[31merror[0m] [0m[0m cannot be applied to (Int, Int)[0m
-[0m[[0m[31merror[0m] [0m[0m    b(7, 0) := a[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala:20:5: overloaded method value apply with alternatives:[0m
-[0m[[0m[31merror[0m] [0m[0m  (idx: Int)chisel3.UInt <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (p: chisel3.UInt)chisel3.UInt[0m
-[0m[[0m[31merror[0m] [0m[0m cannot be applied to (Int, Int)[0m
-[0m[[0m[31merror[0m] [0m[0m    b(11, 0) := a[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala:16:27: not found: type D2EIO[0m
+[0m[[0m[31merror[0m] [0m[0m    val d2e = Flipped(new D2EIO)[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala:15:26: not found: type F2DIO[0m
+[0m[[0m[31merror[0m] [0m[0m    val f2d = Output(new F2DIO)[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
