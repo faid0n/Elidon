@@ -1,7 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala:16:27: not found: type D2EIO[0m
-[0m[[0m[31merror[0m] [0m[0m    val d2e = Flipped(new D2EIO)[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala:15:26: not found: type F2DIO[0m
-[0m[[0m[31merror[0m] [0m[0m    val f2d = Output(new F2DIO)[0m
-[0m[[0m[31merror[0m] [0m[0m                         ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Main.scala:24:40: value m2W is not a member of chisel3.Bundle{val f2d: F2D; val d2e: D2E; val m2w: M2W}[0m
+[0m[[0m[31merror[0m] [0m[0m  memoryStage.io.m2w := decodeStage.io.m2W[0m
+[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

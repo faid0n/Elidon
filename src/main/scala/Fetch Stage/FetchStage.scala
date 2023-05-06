@@ -6,12 +6,14 @@ class F2D extends Bundle {
   val instruction = UInt(16.W)
 }
 
+class Branch extends Bundle {
+  val enable = Bool()
+  val pc = UInt(16.W)
+}
+
 class FetchStage extends Module {
   val io = IO(new Bundle {
-    val branch = new Bundle {
-      val enable = Input(Bool())
-      val pc = Input(UInt(16.W))
-    }
+    val branch = Input(new Branch)
     val f2d = Output(new F2D)
   })
 

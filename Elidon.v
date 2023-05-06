@@ -88,17 +88,17 @@ module Elidon(
   output [3:0]  io_display_selector,
   input  [15:0] io_switches
 );
-  wire  displayMultiplexer_clock; // @[Main.scala 38:34]
-  wire  displayMultiplexer_reset; // @[Main.scala 38:34]
-  wire [3:0] displayMultiplexer_io_display_selector; // @[Main.scala 38:34]
-  DisplayMultiplexer displayMultiplexer ( // @[Main.scala 38:34]
+  wire  displayMultiplexer_clock; // @[Main.scala 36:34]
+  wire  displayMultiplexer_reset; // @[Main.scala 36:34]
+  wire [3:0] displayMultiplexer_io_display_selector; // @[Main.scala 36:34]
+  DisplayMultiplexer displayMultiplexer ( // @[Main.scala 36:34]
     .clock(displayMultiplexer_clock),
     .reset(displayMultiplexer_reset),
     .io_display_selector(displayMultiplexer_io_display_selector)
   );
-  assign io_leds = 16'h0; // @[Main.scala 37:11]
-  assign io_display_segments = 7'h40; // @[Main.scala 40:14]
-  assign io_display_selector = displayMultiplexer_io_display_selector; // @[Main.scala 40:14]
+  assign io_leds = 16'h0; // @[Main.scala 35:11]
+  assign io_display_segments = 7'h40; // @[Main.scala 38:14]
+  assign io_display_selector = displayMultiplexer_io_display_selector; // @[Main.scala 38:14]
   assign displayMultiplexer_clock = clock;
   assign displayMultiplexer_reset = reset;
 endmodule

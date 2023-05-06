@@ -1401,3 +1401,37 @@ Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException:
 2023.05.03 17:54:29 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\SignExtend.scala
 2023.05.03 17:56:48 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Main.scala
 2023.05.03 17:58:39 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Main.scala
+2023.05.03 18:17:46 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 6:18:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 18469
+May 03, 2023 6:21:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 18586
+2023.05.03 18:23:00 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Memory Stage\DataMemory.scala
+2023.05.03 18:24:47 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Main.scala
+2023.05.03 18:25:52 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala
+2023.05.03 18:27:18 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 03, 2023 6:36:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 18800
+2023.05.03 18:38:00 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala
+May 04, 2023 9:16:02 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+May 04, 2023 9:16:03 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+May 04, 2023 3:25:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 19004
+May 04, 2023 3:25:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 19042
+2023.05.04 15:31:58 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+May 04, 2023 3:33:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 19670
+2023.05.04 15:33:36 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.04 15:33:53 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Decode Stage\DecodeStage.scala
+2023.05.04 15:34:16 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+May 04, 2023 3:34:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 19795
+2023.05.04 15:35:01 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Fetch Stage\FetchStage.scala
+2023.05.04 15:35:30 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala
+2023.05.04 15:35:37 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala
+2023.05.05 16:38:01 INFO  Shutting down server
+2023.05.05 16:38:01 INFO  shutting down Metals
+2023.05.05 16:38:01 INFO  Exiting server
