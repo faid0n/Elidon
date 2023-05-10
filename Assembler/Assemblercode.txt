@@ -1,6 +1,27 @@
-add $t1, $t2, $t3
-add $t1, $t2, $t4
-Begin:
-lui $t3, 222
-sw $s2, 15($t1)
-j Begin
+# This takes input from switches
+# Shifts left by 3 and shows result in LEDs
+# Adds 3 and shows on display
+
+LOOP:
+lw s0 4(zero)
+lli s1 3
+add zero zero zero
+add zero zero zero
+add zero zero zero
+add zero zero zero
+add zero zero zero
+sll s2 s0 s1
+add s3 s0 s1 
+add zero zero zero
+add zero zero zero
+add zero zero zero
+add zero zero zero
+add zero zero zero
+sw s2 0(zero)
+sw s3 2(zero)
+j LOOP
+add zero zero zero
+add zero zero zero
+add zero zero zero
+add zero zero zero
+add zero zero zero

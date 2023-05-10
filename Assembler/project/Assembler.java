@@ -4,8 +4,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.math.BigInteger;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
-import java.io.FileWriter;   // Import the FileWriter class
+import java.util.Random;
 
 
 public class Assembler {
@@ -29,36 +32,57 @@ public class Assembler {
     }
 
     public void Run() throws Exception {
-        try (Scanner scanner = new Scanner(new File("Assemblercode.txt"))) {
 
-            String aux="0000000000000000";
-            while(scanner.hasNextLine()) {
-                String tmp= scanner.nextLine();
-                if(!tmp.contains(":")) {
-                    Instruction Instruction;
-                    Instruction = ParseInstruction(tmp);
-                    stringList.add(aux+Assemble(Instruction));
+        String folderPath = "..\\AssemblerCode";
+        File folder = new File(folderPath);
+        File[] listOfFiles = folder.listFiles();
+        if (listOfFiles != null) {
+            for (File file : listOfFiles) {
+                if (file.isFile()) {
+
+
+                    try (Scanner scanner = new Scanner(new File(file.getPath()))) {
+
+                        List<String> stringList2=new ArrayList<>();
+                        String aux="0000000000000000";
+                        while(scanner.hasNextLine()) {
+                            String tmp= scanner.nextLine();
+                            if (!(tmp.startsWith("#") || tmp.length()==0)){
+                                if(!tmp.contains(":")) {
+                                    Instruction Instruction;
+                                    Instruction = ParseInstruction(tmp);
+                                    stringList2.add(aux+Assemble(Instruction));
+                                }
+                            }
+                        }
+                        String folderPathwrite = "..\\MachineCode";
+                        String fileName = generateRandomFileName(10) + ".txt";
+
+                        try {
+                            Files.newBufferedWriter(Paths.get(folderPathwrite, fileName), StandardOpenOption.CREATE)
+                                    .append(String.join("\n", stringList2))
+                                    .close();
+                            System.out.println("File has been written successfully!");
+                        } catch (IOException e) {
+                            System.err.println("An error occurred while writing the file.");
+                            e.printStackTrace();
+                        }
+
+
+                    } catch (FileNotFoundException e) {
+                        throw new FileNotFoundException("File not found at: " + e.getMessage());
+                    } catch (Exception e) {
+                        throw new Exception("Unhandled exception at: " + e.getMessage());
+                    }
+
+                    System.out.println("File: " + file.getName());
                 }
             }
-            try{
-                FileWriter myWriter = new FileWriter("InstructionsMem.txt");
-                for( String str:stringList){
-                    myWriter.write(str);
-                    myWriter.write("\n");
-                }
-                myWriter.close();
-
-            }catch (IOException e) {
-                System.out.println("An error occurred.");
-                e.printStackTrace();
-            }
-
-
-        } catch (FileNotFoundException e) {
-            throw new FileNotFoundException("File not found at: " + e.getMessage());
-        } catch (Exception e) {
-            throw new Exception("Unhandled exception at: " + e.getMessage());
+        } else {
+            System.out.println("No files found in the directory.");
         }
+
+
 
 
 
@@ -210,7 +234,7 @@ public class Assembler {
 
 
     private void Initialize() throws Exception {
-        try (Scanner scanner = new Scanner(new File("MIPSGreenSheet.csv"))) {
+        try (Scanner scanner = new Scanner(new File("InstructionSet.csv"))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] assemblyCode = line.split(",");
@@ -277,5 +301,17 @@ public class Assembler {
         }
 
 
+    }
+    private static String generateRandomFileName(int length) {
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder(length);
+        String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+        for (int i = 0; i < length; i++) {
+            int index = random.nextInt(characters.length());
+            sb.append(characters.charAt(index));
+        }
+
+        return sb.toString();
     }
 }

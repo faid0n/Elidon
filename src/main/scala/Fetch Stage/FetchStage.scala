@@ -1,18 +1,20 @@
 import chisel3._
 import chisel3.util._
 
-class F2DIO extends Bundle {
-  val pc = Output(UInt(16.W))
-  val instruction = Output(UInt(16.W))
+class F2D extends Bundle {
+  val pc = UInt(16.W)
+  val instruction = UInt(16.W)
+}
+
+class Branch extends Bundle {
+  val enable = Bool()
+  val pc = UInt(16.W)
 }
 
 class FetchStage extends Module {
   val io = IO(new Bundle {
-    val branch = new Bundle {
-      val enable = Input(Bool())
-      val pc = Input(UInt(16.W))
-    }
-    val f2d = new F2DIO
+    val branch = Input(new Branch)
+    val f2d = Output(new F2D)
   })
 
   val pcReg = RegInit(0.U(16.W))
