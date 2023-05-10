@@ -1948,3 +1948,303 @@ WARNING: Unmatched cancel notification for request id 11080
 May 10, 2023 1:13:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 WARNING: Unmatched cancel notification for request id 11420
 2023.05.10 13:15:39 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala
+2023.05.10 13:39:41 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java
+2023.05.10 13:39:42 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java
+2023.05.10 13:39:42 WARN  Running javac-semanticdb failed for file:///C:/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/Assembler/project/AssemblerTest.java. Output:
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:3: error: package org.junit.jupiter.api does not exist
+import org.junit.jupiter.api.DisplayName;
+                            ^
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:4: error: package org.junit.jupiter.api does not exist
+import org.junit.jupiter.api.Test;
+                            ^
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:6: error: package org.junit.jupiter.api does not exist
+import static org.junit.jupiter.api.Assertions.assertEquals;
+                                   ^
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:6: error: static import only from classes and interfaces
+import static org.junit.jupiter.api.Assertions.assertEquals;
+^
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:9: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:10: error: cannot find symbol
+    @DisplayName("ori $t0, $zero, 15")
+     ^
+  symbol:   class DisplayName
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:23: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:24: error: cannot find symbol
+    @DisplayName("addi $t1, $zero, 3")
+     ^
+  symbol:   class DisplayName
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:37: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:38: error: cannot find symbol
+    @DisplayName("add $t1, $zero, $t1")
+     ^
+  symbol:   class DisplayName
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:51: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:52: error: cannot find symbol
+    @DisplayName("sub $t2, $t0, $s0")
+     ^
+  symbol:   class DisplayName
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:65: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:66: error: cannot find symbol
+    @DisplayName("slt $s0, $t1, $t3")
+     ^
+  symbol:   class DisplayName
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:79: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:80: error: cannot find symbol
+    @DisplayName("andi $v0, $zero, 1")
+     ^
+  symbol:   class DisplayName
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:13: error: cannot find symbol
+        Assembler assembler = new Assembler();
+        ^
+  symbol:   class Assembler
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:13: error: cannot find symbol
+        Assembler assembler = new Assembler();
+                                  ^
+  symbol:   class Assembler
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:16: error: cannot find symbol
+        Instruction instruction = assembler.ParseInstruction("ori $t0, $zero, 15");
+        ^
+  symbol:   class Instruction
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:20: error: cannot find symbol
+        assertEquals("0x3408000f", assemblyCode);
+        ^
+  symbol:   method assertEquals(String,String)
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:27: error: cannot find symbol
+        Assembler assembler = new Assembler();
+        ^
+  symbol:   class Assembler
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:27: error: cannot find symbol
+        Assembler assembler = new Assembler();
+                                  ^
+  symbol:   class Assembler
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:30: error: cannot find symbol
+        Instruction instruction = assembler.ParseInstruction("addi $t1, $zero, 3");
+        ^
+  symbol:   class Instruction
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:34: error: cannot find symbol
+        assertEquals("0x20090003", assemblyCode);
+        ^
+  symbol:   method assertEquals(String,String)
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:41: error: cannot find symbol
+        Assembler assembler = new Assembler();
+        ^
+  symbol:   class Assembler
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:41: error: cannot find symbol
+        Assembler assembler = new Assembler();
+                                  ^
+  symbol:   class Assembler
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:44: error: cannot find symbol
+        Instruction instruction = assembler.ParseInstruction("add $t1, $zero, $t1");
+        ^
+  symbol:   class Instruction
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:48: error: cannot find symbol
+        assertEquals("0x00094820", assemblyCode);
+        ^
+  symbol:   method assertEquals(String,String)
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:55: error: cannot find symbol
+        Assembler assembler = new Assembler();
+        ^
+  symbol:   class Assembler
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:55: error: cannot find symbol
+        Assembler assembler = new Assembler();
+                                  ^
+  symbol:   class Assembler
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:58: error: cannot find symbol
+        Instruction instruction = assembler.ParseInstruction("sub $t2, $t0, $s0");
+        ^
+  symbol:   class Instruction
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:62: error: cannot find symbol
+        assertEquals("0x01105022", assemblyCode);
+        ^
+  symbol:   method assertEquals(String,String)
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:69: error: cannot find symbol
+        Assembler assembler = new Assembler();
+        ^
+  symbol:   class Assembler
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:69: error: cannot find symbol
+        Assembler assembler = new Assembler();
+                                  ^
+  symbol:   class Assembler
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:72: error: cannot find symbol
+        Instruction instruction = assembler.ParseInstruction("slt $s0, $t1, $t3");
+        ^
+  symbol:   class Instruction
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:76: error: cannot find symbol
+        assertEquals("0x012b802a", assemblyCode);
+        ^
+  symbol:   method assertEquals(String,String)
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:83: error: cannot find symbol
+        Assembler assembler = new Assembler();
+        ^
+  symbol:   class Assembler
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:83: error: cannot find symbol
+        Assembler assembler = new Assembler();
+                                  ^
+  symbol:   class Assembler
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:86: error: cannot find symbol
+        Instruction instruction = assembler.ParseInstruction("andi $v0, $zero, 1");
+        ^
+  symbol:   class Instruction
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:90: error: cannot find symbol
+        assertEquals("0x30020001", assemblyCode);
+        ^
+  symbol:   method assertEquals(String,String)
+  location: class AssemblerTest
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java:1: error: semanticdb-javac: unknown flag 'Documents\ECE\Semester'
+package project;
+^
+41 errors
+2023.05.10 13:39:42 WARN  Running javac-semanticdb failed for file:///C:/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/Assembler/project/Assembler.java. Output:
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:13: error: cannot find symbol
+    private final List<InstructionFormat> InstructionsList;
+                       ^
+  symbol:   class InstructionFormat
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:69: error: cannot find symbol
+    public Instruction ParseInstruction(String instruction) throws Exception {
+           ^
+  symbol:   class Instruction
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:119: error: cannot find symbol
+    public String Assemble(Instruction instruction) {
+                           ^
+  symbol:   class Instruction
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:38: error: cannot find symbol
+                    Instruction Instruction;
+                    ^
+  symbol:   class Instruction
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:70: error: cannot find symbol
+        Instruction Instruction = new Instruction();
+        ^
+  symbol:   class Instruction
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:70: error: cannot find symbol
+        Instruction Instruction = new Instruction();
+                                      ^
+  symbol:   class Instruction
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:120: error: cannot find symbol
+        for (InstructionFormat instructionFormat: InstructionsList) {
+             ^
+  symbol:   class InstructionFormat
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:123: error: illegal start of type
+                switch (instructionFormat.InstructionType) {
+                       ^
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:124: error: cannot find symbol
+                    case R:
+                         ^
+  symbol:   variable R
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:131: error: cannot find symbol
+                    case I:
+                         ^
+  symbol:   variable I
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:137: error: cannot find symbol
+                    case J:
+                         ^
+  symbol:   variable J
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:141: error: cannot find symbol
+                    case mI:
+                         ^
+  symbol:   variable mI
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:217: error: cannot find symbol
+                InstructionFormat instructionFormat = new InstructionFormat();
+                ^
+  symbol:   class InstructionFormat
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:217: error: cannot find symbol
+                InstructionFormat instructionFormat = new InstructionFormat();
+                                                          ^
+  symbol:   class InstructionFormat
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:221: error: cannot find symbol
+                        instructionFormat.InstructionType = InstructionType.R;
+                                                            ^
+  symbol:   variable InstructionType
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:227: error: cannot find symbol
+                        instructionFormat.InstructionType = InstructionType.I;
+                                                            ^
+  symbol:   variable InstructionType
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:231: error: cannot find symbol
+                        instructionFormat.InstructionType = InstructionType.mI;
+                                                            ^
+  symbol:   variable InstructionType
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:235: error: cannot find symbol
+                        instructionFormat.InstructionType = InstructionType.J;
+                                                            ^
+  symbol:   variable InstructionType
+  location: class Assembler
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Assembler.java:1: error: semanticdb-javac: unknown flag 'Documents\ECE\Semester'
+package project;
+^
+19 errors
+2023.05.10 13:39:42 INFO  time: code lens generation in 1.19s
+2023.05.10 13:39:47 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\AssemblerTest.java
+2023.05.10 13:41:32 WARN  no build target for: C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Instruction.java
+2023.05.10 13:41:33 WARN  Running javac-semanticdb failed for file:///C:/Users/faido/Documents/My%20Documents/ECE/Semester%206/Advanced%20Computer%20Architecture/Elidon/Assembler/project/Instruction.java. Output:
+C:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\Assembler\project\Instruction.java:1: error: semanticdb-javac: unknown flag 'Documents\ECE\Semester'
+package project;
+^
+1 error

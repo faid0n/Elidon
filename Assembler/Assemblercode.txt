@@ -1,7 +1,3 @@
-# This takes input from switches
-# Shifts left by 3 and shows result in LEDs
-# Adds 3 and shows on display
-
 LOOP:
 lw s0 4(zero)
 lli s1 3
