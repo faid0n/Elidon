@@ -10,7 +10,7 @@ and,R, 0
 nor,R, 1
 add,R,  2
 sub, R, 3
-sla, R,  4
+sll, R,  4
 slt, R, 5
 div, R, 6
 mul, R, 7
