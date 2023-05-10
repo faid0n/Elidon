@@ -1,4 +1,21 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Main.scala:24:40: value m2W is not a member of chisel3.Bundle{val f2d: F2D; val d2e: D2E; val m2w: M2W}[0m
-[0m[[0m[31merror[0m] [0m[0m  memoryStage.io.m2w := decodeStage.io.m2W[0m
-[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala:55:22: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Int(0)[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m      io.d2e.rs1 === 0[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala:66:103: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.Bool[0m
+[0m[[0m[31merror[0m] [0m[0m  e2mReg.writeBack := !(opcode === Opcode.sw || opcode === Opcode.j || opcode === Opcode.jr || Opcode.bez)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala:71:18: not found: value opcdoe[0m
+[0m[[0m[31merror[0m] [0m[0m  e2mReg.load := opcdoe === Opcode.lw[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\faido\Documents\My Documents\ECE\Semester 6\Advanced Computer Architecture\Elidon\src\main\scala\Execute Stage\ExecuteStage.scala:90:44: overloaded method value >> with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (that: chisel3.UInt)chisel3.Bits <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (that: Int)chisel3.Bits <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (that: BigInt)chisel3.Bits[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (chisel3.SInt)[0m
+[0m[[0m[31merror[0m] [0m[0m      e2mReg.resultOrAdress := (io.d2e.rs1 >> io.d2e.rs2.asSInt).asUInt[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m

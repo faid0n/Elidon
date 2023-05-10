@@ -21,17 +21,20 @@ class DataMemory extends Module {
 
   val memory = SyncReadMem(2^16, UInt(8.W))
 
+  // // readWrite but not yet supported by chisel..
+  // val lsB = memory.readWrite(io.data.adress, io.data.writeValue(7,0), io.data.read, io.data.write)
+  // val msB = memory.readWrite(io.data.adress + 1.U, io.data.writeValue(15, 8), io.data.read, io.data.write)
+  // io.data.readValue := msB ## lsB
+
   // Read
   val lsB = memory.read(io.data.adress, io.data.read)
   val msB = memory.read(io.data.adress + 1.U, io.data.read)
   io.data.readValue := msB ## lsB
-
   // Write
   when(io.data.write) {
     memory.write(io.data.adress, io.data.writeValue(7,0))
     memory.write(io.data.adress + 1.U, io.data.writeValue(15,8))
   }
-
 
   /********************************************************
   * Add IO functionality:
