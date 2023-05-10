@@ -44,14 +44,13 @@ public class Assembler {
                     try (Scanner scanner = new Scanner(new File(file.getPath()))) {
 
                         List<String> stringList2=new ArrayList<>();
-                        String aux="0000000000000000";
                         while(scanner.hasNextLine()) {
                             String tmp= scanner.nextLine();
                             if (!(tmp.startsWith("#") || tmp.length()==0)){
                                 if(!tmp.contains(":")) {
                                     Instruction Instruction;
                                     Instruction = ParseInstruction(tmp);
-                                    stringList2.add(aux+Assemble(Instruction));
+                                    stringList2.add(Assemble(Instruction));
                                 }
                             }
                         }
