@@ -283,21 +283,30 @@ public class Assembler {
             throw new Exception("Unhandled exception at: " + e.getMessage());
         }
 
-        try (Scanner scanner = new Scanner(new File("Assemblercode.txt"))) {
-            int pc=0;
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                if (line.contains(":")){
+        File folder = new File("..\\Assembly Code"); // replace with your folder path
+        File[] listOfFiles = folder.listFiles();
 
-                    Labels.put(line.replace(":",""),pc);
+        if (listOfFiles != null) {
+            for (File file : listOfFiles) {
+                if (file.isFile()) {
+                    try (Scanner scanner = new Scanner(file)) {
+                        int pc = 0;
+                        while (scanner.hasNextLine()) {
+                            String line = scanner.nextLine();
+                            if (line.contains(":")) {
+                                Labels.put(line.replace(":", ""), pc);
+                            }
+                            pc += 1;
+                        }
+                    } catch (FileNotFoundException e) {
+                        throw new FileNotFoundException("File not found at: " + e.getMessage());
+                    } catch (Exception e) {
+                        throw new Exception("Unhandled exception at: " + e.getMessage());
+                    }
                 }
-                pc+=1;
-
             }
-        } catch (FileNotFoundException e) {
-            throw new FileNotFoundException("File not found at: " + e.getMessage());
-        } catch (Exception e) {
-            throw new Exception("Unhandled exception at: " + e.getMessage());
+        } else {
+            System.out.println("No files found in the directory.");
         }
 
 
