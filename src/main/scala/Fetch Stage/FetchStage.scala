@@ -11,7 +11,7 @@ class Branch extends Bundle {
   val pc = UInt(16.W)
 }
 
-class FetchStage extends Module {
+class FetchStage(filename: String) extends Module {
   val io = IO(new Bundle {
     val branch = Input(new Branch)
     val f2d = Output(new F2D)
@@ -25,7 +25,7 @@ class FetchStage extends Module {
     pcReg := pcReg + 2.U
   }
 
-  val instructionMemory = Module(new InstructionMemory)
+  val instructionMemory = Module(new InstructionMemory(filename))
   instructionMemory.io.pc := pcReg
   
   // TODO make bundle out of this somehow

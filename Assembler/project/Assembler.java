@@ -33,7 +33,7 @@ public class Assembler {
 
     public void Run() throws Exception {
 
-        String folderPath = "..\\AssemblerCode";
+        String folderPath = "..\\Assembly Code";
         File folder = new File(folderPath);
         File[] listOfFiles = folder.listFiles();
         if (listOfFiles != null) {
@@ -44,7 +44,7 @@ public class Assembler {
                     try (Scanner scanner = new Scanner(new File(file.getPath()))) {
 
                         List<String> stringList2=new ArrayList<>();
-                        String aux="0000000000000000";
+                        String aux="";
                         while(scanner.hasNextLine()) {
                             String tmp= scanner.nextLine();
                             if (!(tmp.startsWith("#") || tmp.length()==0)){
@@ -55,8 +55,8 @@ public class Assembler {
                                 }
                             }
                         }
-                        String folderPathwrite = "..\\MachineCode";
-                        String fileName = generateRandomFileName(10) + ".txt";
+                        String folderPathwrite = "..\\Machine Code";
+                        String fileName = file.getName();
 
                         try {
                             Files.newBufferedWriter(Paths.get(folderPathwrite, fileName), StandardOpenOption.CREATE)

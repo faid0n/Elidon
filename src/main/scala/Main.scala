@@ -1,7 +1,7 @@
 import chisel3._
 import chisel3.util._
 
-class Elidon extends Module {
+class Elidon(filename: String) extends Module {
   val io = IO(new Bundle {
     val leds = Output(UInt(16.W))
     val display = new Bundle {
@@ -12,7 +12,7 @@ class Elidon extends Module {
   })
 
   // Initialise Pipeline Stages
-  val fetchStage = Module(new FetchStage)
+  val fetchStage = Module(new FetchStage(filename))
   val decodeStage = Module(new DecodeStage)
   val executeStage = Module(new ExecuteStage)
   val memoryStage = Module(new MemoryStage)
@@ -38,6 +38,14 @@ class Elidon extends Module {
   io.display := displayMultiplexer.io.display
 }
 
+// To run do
+// > sbt "run filename"
+// where filename is the path to the instruction 
 object Main extends App {
-  (new chisel3.stage.ChiselStage).emitVerilog(new Elidon())
+  val filename = if (args.length > 0) args(0) else "test"
+  println("************************************************")
+  println("    Generating hardware for Elidon processor")
+  println("    Machine code loaded: " + filename)
+  println("****************************************")
+  (new chisel3.stage.ChiselStage).emitVerilog(new Elidon(filename))
 }
