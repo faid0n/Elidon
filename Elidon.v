@@ -17,7 +17,7 @@ module InstructionMemory(
   wire [15:0] _GEN_13 = 5'hd == io_pc[5:1] ? 16'h2000 : _GEN_12; // @[InstructionMemory.scala 16:{18,18}]
   wire [15:0] _GEN_14 = 5'he == io_pc[5:1] ? 16'hed00 : _GEN_13; // @[InstructionMemory.scala 16:{18,18}]
   wire [15:0] _GEN_15 = 5'hf == io_pc[5:1] ? 16'hee02 : _GEN_14; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_16 = 5'h10 == io_pc[5:1] ? 16'hf000 : _GEN_15; // @[InstructionMemory.scala 16:{18,18}]
+  wire [15:0] _GEN_16 = 5'h10 == io_pc[5:1] ? 16'hf004 : _GEN_15; // @[InstructionMemory.scala 16:{18,18}]
   wire [15:0] _GEN_17 = 5'h11 == io_pc[5:1] ? 16'h2000 : _GEN_16; // @[InstructionMemory.scala 16:{18,18}]
   wire [15:0] _GEN_18 = 5'h12 == io_pc[5:1] ? 16'h2000 : _GEN_17; // @[InstructionMemory.scala 16:{18,18}]
   wire [15:0] _GEN_19 = 5'h13 == io_pc[5:1] ? 16'h2000 : _GEN_18; // @[InstructionMemory.scala 16:{18,18}]

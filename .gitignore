@@ -1,7 +1,7 @@
 /.metals/
 /.vscode/
 /bsp/
-/bloop/
+/.bloop/
 /quartus/
 /project/
 /target/

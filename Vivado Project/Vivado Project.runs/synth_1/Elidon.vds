@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri May  5 14:01:18 2023
-# Process ID: 10872
+# Start of session at: Thu May 11 10:38:25 2023
+# Process ID: 12628
 # Current directory: C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Vivado Project/Vivado Project.runs/synth_1
 # Command line: vivado.exe -log Elidon.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Elidon.tcl
 # Log file: C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Vivado Project/Vivado Project.runs/synth_1/Elidon.vds
@@ -11,75 +11,74 @@
 # Running On: FBI-SURVEILANCE-TESLA, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 4, Host memory: 8415 MB
 #-----------------------------------------------------------
 source Elidon.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 414.098 ; gain = 92.684
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 415.926 ; gain = 92.777
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Vivado Project/Vivado Project.srcs/utils_1/imports/synth_1/Elidon.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Vivado Project/Vivado Project.srcs/utils_1/imports/synth_1/Elidon.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top Elidon -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5864
+INFO: [Synth 8-7075] Helper process launched with PID 6256
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/ProgramFiles/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1222.336 ; gain = 407.586
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1226.387 ; gain = 408.613
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Elidon' [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:83]
-INFO: [Synth 8-6157] synthesizing module 'DisplayMultiplexer' [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'DisplayMultiplexer' (0#1) [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'Elidon' (0#1) [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:83]
-WARNING: [Synth 8-3917] design Elidon has port io_leds[15] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[14] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[13] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[12] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[11] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[10] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[9] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[8] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[7] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[6] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[5] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[4] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[3] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[2] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[1] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[0] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[6] driven by constant 1
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[5] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[4] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[3] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[2] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[1] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[0] driven by constant 0
-WARNING: [Synth 8-7129] Port io_switches[15] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[14] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[13] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[12] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[11] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[10] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[9] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[8] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[7] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[6] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[5] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[4] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[3] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[2] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[1] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[0] in module Elidon is either unconnected or has no load
+INFO: [Synth 8-6157] synthesizing module 'Elidon' [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:972]
+INFO: [Synth 8-6157] synthesizing module 'FetchStage' [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:27]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (0#1) [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FetchStage' (0#1) [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:27]
+INFO: [Synth 8-6157] synthesizing module 'DecodeStage' [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:114]
+INFO: [Synth 8-6155] done synthesizing module 'DecodeStage' (0#1) [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:114]
+INFO: [Synth 8-6157] synthesizing module 'ExecuteStage' [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:419]
+INFO: [Synth 8-6155] done synthesizing module 'ExecuteStage' (0#1) [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:419]
+INFO: [Synth 8-6157] synthesizing module 'MemoryStage' [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:604]
+INFO: [Synth 8-6155] done synthesizing module 'MemoryStage' (0#1) [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:604]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:680]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (0#1) [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:680]
+INFO: [Synth 8-6157] synthesizing module 'DisplayMultiplexer' [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:876]
+INFO: [Synth 8-6157] synthesizing module 'SevenSegDec' [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:855]
+INFO: [Synth 8-6155] done synthesizing module 'SevenSegDec' (0#1) [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:855]
+INFO: [Synth 8-6155] done synthesizing module 'DisplayMultiplexer' (0#1) [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:876]
+INFO: [Synth 8-6155] done synthesizing module 'Elidon' (0#1) [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:972]
+WARNING: [Synth 8-6014] Unused sequential element memory_lsB_en_pipe_0_reg was removed.  [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:732]
+WARNING: [Synth 8-6014] Unused sequential element memory_msB_en_pipe_0_reg was removed.  [C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Elidon.v:739]
+WARNING: [Synth 8-4767] Trying to implement RAM 'memory_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "memory_reg" dissolved into registers
+WARNING: [Synth 8-7129] Port io_pc[15] in module InstructionMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_pc[14] in module InstructionMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_pc[13] in module InstructionMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_pc[12] in module InstructionMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_pc[11] in module InstructionMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_pc[10] in module InstructionMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_pc[9] in module InstructionMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_pc[8] in module InstructionMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_pc[7] in module InstructionMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_pc[6] in module InstructionMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_pc[0] in module InstructionMemory is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1311.887 ; gain = 497.137
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1323.223 ; gain = 505.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1311.887 ; gain = 497.137
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1323.223 ; gain = 505.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1311.887 ; gain = 497.137
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1323.223 ; gain = 505.449
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1311.887 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1323.223 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -90,42 +89,59 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Elidon_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1346.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1386.496 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 1346.473 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1386.496 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/ProgramFiles/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1386.496 ; gain = 568.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1386.496 ; gain = 568.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1386.496 ; gain = 568.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 1386.496 ; gain = 568.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input   17 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 1     
 	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
+	               16 Bit    Registers := 28    
+	                8 Bit    Registers := 18    
+	                5 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	   5 Input    4 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 1     
+	   2 Input  144 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 2     
+	   8 Input   16 Bit        Muxes := 3     
+	   2 Input   16 Bit        Muxes := 16    
+	   6 Input   16 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 11    
+	   2 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 2     
+	  22 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 18    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -142,65 +158,43 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3917] design Elidon has port io_leds[15] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[14] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[13] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[12] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[11] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[10] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[9] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[8] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[7] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[6] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[5] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[4] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[3] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[2] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[1] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_leds[0] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[6] driven by constant 1
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[5] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[4] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[3] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[2] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[1] driven by constant 0
-WARNING: [Synth 8-3917] design Elidon has port io_display_segments[0] driven by constant 0
-WARNING: [Synth 8-7129] Port io_switches[15] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[14] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[13] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[12] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[11] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[10] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[9] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[8] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[7] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[6] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[5] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[4] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[3] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[2] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[1] in module Elidon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_switches[0] in module Elidon is either unconnected or has no load
+DSP Report: Generating DSP _e2mReg_resultOrAdress_T_19, operation Mode is: A*B.
+DSP Report: operator _e2mReg_resultOrAdress_T_19 is absorbed into DSP _e2mReg_resultOrAdress_T_19.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:27 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:13 . Memory (MB): peak = 1386.496 ; gain = 568.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ExecuteStage | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:01:38 . Memory (MB): peak = 1386.496 ; gain = 568.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished Timing Optimization : Time (s): cpu = 00:01:26 ; elapsed = 00:01:50 . Memory (MB): peak = 1451.949 ; gain = 634.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:52 . Memory (MB): peak = 1451.949 ; gain = 634.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -218,41 +212,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished IO Insertion : Time (s): cpu = 00:01:39 ; elapsed = 00:02:05 . Memory (MB): peak = 1451.949 ; gain = 634.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:39 ; elapsed = 00:02:05 . Memory (MB): peak = 1451.949 ; gain = 634.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:39 ; elapsed = 00:02:06 . Memory (MB): peak = 1451.949 ; gain = 634.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:39 ; elapsed = 00:02:06 . Memory (MB): peak = 1451.949 ; gain = 634.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:39 ; elapsed = 00:02:06 . Memory (MB): peak = 1451.949 ; gain = 634.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:39 ; elapsed = 00:02:06 . Memory (MB): peak = 1451.949 ; gain = 634.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ExecuteStage | A'*B'       | 30     | 18     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 0    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
 
 Report BlackBoxes: 
 +-+--------------+----------+
@@ -261,41 +263,45 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     5|
-|3     |LUT1   |     1|
-|4     |LUT2   |     5|
-|5     |LUT3   |     1|
-|6     |LUT4   |     5|
-|7     |LUT5   |     1|
-|8     |FDRE   |    19|
-|9     |IBUF   |     2|
-|10    |OBUF   |    27|
-+------+-------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   120|
+|3     |DSP48E1 |     1|
+|4     |LUT1    |    81|
+|5     |LUT2    |    56|
+|6     |LUT3    |    50|
+|7     |LUT4    |   100|
+|8     |LUT5    |   486|
+|9     |LUT6    |   534|
+|10    |MUXF7   |    64|
+|11    |MUXF8   |    32|
+|12    |FDRE    |   635|
+|13    |IBUF    |    18|
+|14    |OBUF    |    27|
++------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:39 ; elapsed = 00:02:06 . Memory (MB): peak = 1451.949 ; gain = 634.176
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 40 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:33 . Memory (MB): peak = 1346.473 ; gain = 497.137
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1346.473 ; gain = 531.723
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:22 ; elapsed = 00:02:00 . Memory (MB): peak = 1451.949 ; gain = 570.902
+Synthesis Optimization Complete : Time (s): cpu = 00:01:40 ; elapsed = 00:02:06 . Memory (MB): peak = 1451.949 ; gain = 634.176
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1348.277 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 1451.949 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 217 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1355.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1451.949 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 749be4c1
+Synth Design complete, checksum: a461a2f2
 INFO: [Common 17-83] Releasing license: Synthesis
-21 Infos, 79 Warnings, 0 Critical Warnings and 0 Errors encountered.
+41 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:46 . Memory (MB): peak = 1355.938 ; gain = 937.414
+synth_design: Time (s): cpu = 00:01:49 ; elapsed = 00:02:40 . Memory (MB): peak = 1451.949 ; gain = 1006.523
 INFO: [Common 17-1381] The checkpoint 'C:/Users/faido/Documents/My Documents/ECE/Semester 6/Advanced Computer Architecture/Elidon/Vivado Project/Vivado Project.runs/synth_1/Elidon.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Elidon_utilization_synth.rpt -pb Elidon_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri May  5 14:02:18 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu May 11 10:41:30 2023...

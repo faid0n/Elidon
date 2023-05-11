@@ -21,7 +21,7 @@ circuit Elidon :
     rom[13] <= UInt<16>("h2000") @[InstructionMemory.scala 15:20]
     rom[14] <= UInt<16>("hed00") @[InstructionMemory.scala 15:20]
     rom[15] <= UInt<16>("hee02") @[InstructionMemory.scala 15:20]
-    rom[16] <= UInt<16>("hf000") @[InstructionMemory.scala 15:20]
+    rom[16] <= UInt<16>("hf004") @[InstructionMemory.scala 15:20]
     rom[17] <= UInt<16>("h2000") @[InstructionMemory.scala 15:20]
     rom[18] <= UInt<16>("h2000") @[InstructionMemory.scala 15:20]
     rom[19] <= UInt<16>("h2000") @[InstructionMemory.scala 15:20]

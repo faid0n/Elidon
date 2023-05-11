@@ -13,5 +13,6 @@ class InstructionMemory(filename: String) extends Module {
   val machineCode = lines.map(_.asUInt(16.W))
 
   val rom = VecInit(machineCode)
+  
   io.instruction := rom(io.pc(7, 1));
 }
