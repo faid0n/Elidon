@@ -55,13 +55,19 @@ class ExecuteStage extends Module {
       io.d2e.rs1 === 0.U
 
   // Get pc from register if jalr,jar otherwise from the resulting addition
-  io.branch.pc := Mux(opcode === Opcode.jalr || opcode === Opcode.jr, io.d2e.rs1, added)
+  io.branch.pc := Mux(opcode === Opcode.jalr || opcode === Opcode.jr, added, io.d2e.rs1)
   e2mReg.resultOrAdress := added
   
   // This is either the destination register (adress) or it's the value
   // to store in memory
-  e2mReg.rsdAdressOrStoreValue := Mux(opcode === Opcode.sw, io.d2e.rs1, io.d2e.instruction(11, 8))
-
+  when(opcode === Opcode.sw) {
+    e2mReg.rsdAdressOrStoreValue := io.d2e.rs1
+  } .elsewhen(opcode === Opcode.jalr) {
+    e2mReg.rsdAdressOrStoreValue := 1.U // ra
+  } .otherwise {
+    e2mReg.rsdAdressOrStoreValue := io.d2e.instruction(11, 8)
+  }
+  
   // Only false only in sw, non linking branch instructions
   e2mReg.writeBack := !(opcode === Opcode.sw || opcode === Opcode.j || opcode === Opcode.jr || opcode === Opcode.bez)
 
@@ -83,25 +89,25 @@ class ExecuteStage extends Module {
       toAdd2 := io.d2e.rs2
     }
     is(Opcode.sub) {
-      toAdd1 := io.d2e.rs1
-      toAdd2 := (- io.d2e.rs2.asSInt).asUInt
+      toAdd1 := io.d2e.rs2
+      toAdd2 := (- io.d2e.rs1.asSInt).asUInt
     }
     is(Opcode.sll) {
-      // If rs2 < 0 then shift right. otherwise shift left
-      e2mReg.resultOrAdress := Mux(io.d2e.rs2(15), io.d2e.rs1 >> (-io.d2e.rs2).asUInt, io.d2e.rs1 << io.d2e.rs2)
+      // If rs1 < 0 then shift right. otherwise shift left
+      e2mReg.resultOrAdress := Mux(io.d2e.rs1(15), io.d2e.rs2 >> (-io.d2e.rs1).asUInt, io.d2e.rs2 << io.d2e.rs1)
     }
     is(Opcode.slt) {
-      e2mReg.resultOrAdress := (io.d2e.rs1.asSInt < io.d2e.rs2.asSInt).asUInt
+      e2mReg.resultOrAdress := (io.d2e.rs2.asSInt < io.d2e.rs1.asSInt).asUInt
     }
     // TODO: Add remainder
     is(Opcode.div) { 
-      e2mReg.resultOrAdress := (io.d2e.rs1.asSInt / io.d2e.rs2.asSInt).asUInt
+      e2mReg.resultOrAdress := (io.d2e.rs2.asSInt / io.d2e.rs1.asSInt).asUInt
     }
     is(Opcode.mul) {
       e2mReg.resultOrAdress := (io.d2e.rs1.asSInt * io.d2e.rs2.asSInt).asUInt
     }
     is(Opcode.lw, Opcode.sw) {
-      toAdd1 := io.d2e.rs1
+      toAdd1 := io.d2e.rs2
       toAdd2 := io.d2e.instruction(3, 0)
     }
     is(Opcode.lui) {

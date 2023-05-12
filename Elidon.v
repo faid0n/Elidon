@@ -2,27 +2,27 @@ module InstructionMemory(
   input  [15:0] io_pc,
   output [15:0] io_instruction
 );
-  wire [15:0] _GEN_1 = 5'h1 == io_pc[5:1] ? 16'h9c03 : 16'hdb04; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_2 = 5'h2 == io_pc[5:1] ? 16'h2000 : _GEN_1; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_3 = 5'h3 == io_pc[5:1] ? 16'h2000 : _GEN_2; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_4 = 5'h4 == io_pc[5:1] ? 16'h2000 : _GEN_3; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_5 = 5'h5 == io_pc[5:1] ? 16'h2000 : _GEN_4; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_6 = 5'h6 == io_pc[5:1] ? 16'h2000 : _GEN_5; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_7 = 5'h7 == io_pc[5:1] ? 16'h4dbc : _GEN_6; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_8 = 5'h8 == io_pc[5:1] ? 16'h2ebc : _GEN_7; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_9 = 5'h9 == io_pc[5:1] ? 16'h2000 : _GEN_8; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_10 = 5'ha == io_pc[5:1] ? 16'h2000 : _GEN_9; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_11 = 5'hb == io_pc[5:1] ? 16'h2000 : _GEN_10; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_12 = 5'hc == io_pc[5:1] ? 16'h2000 : _GEN_11; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_13 = 5'hd == io_pc[5:1] ? 16'h2000 : _GEN_12; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_14 = 5'he == io_pc[5:1] ? 16'hed00 : _GEN_13; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_15 = 5'hf == io_pc[5:1] ? 16'hee02 : _GEN_14; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_16 = 5'h10 == io_pc[5:1] ? 16'hf004 : _GEN_15; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_17 = 5'h11 == io_pc[5:1] ? 16'h2000 : _GEN_16; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_18 = 5'h12 == io_pc[5:1] ? 16'h2000 : _GEN_17; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_19 = 5'h13 == io_pc[5:1] ? 16'h2000 : _GEN_18; // @[InstructionMemory.scala 16:{18,18}]
-  wire [15:0] _GEN_20 = 5'h14 == io_pc[5:1] ? 16'h2000 : _GEN_19; // @[InstructionMemory.scala 16:{18,18}]
-  assign io_instruction = 5'h15 == io_pc[5:1] ? 16'h2000 : _GEN_20; // @[InstructionMemory.scala 16:{18,18}]
+  wire [15:0] _GEN_1 = 5'h1 == io_pc[5:1] ? 16'h9c03 : 16'hdb04; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_2 = 5'h2 == io_pc[5:1] ? 16'h2000 : _GEN_1; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_3 = 5'h3 == io_pc[5:1] ? 16'h2000 : _GEN_2; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_4 = 5'h4 == io_pc[5:1] ? 16'h2000 : _GEN_3; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_5 = 5'h5 == io_pc[5:1] ? 16'h2000 : _GEN_4; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_6 = 5'h6 == io_pc[5:1] ? 16'h2000 : _GEN_5; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_7 = 5'h7 == io_pc[5:1] ? 16'h4dbc : _GEN_6; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_8 = 5'h8 == io_pc[5:1] ? 16'h2ebc : _GEN_7; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_9 = 5'h9 == io_pc[5:1] ? 16'h2000 : _GEN_8; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_10 = 5'ha == io_pc[5:1] ? 16'h2000 : _GEN_9; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_11 = 5'hb == io_pc[5:1] ? 16'h2000 : _GEN_10; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_12 = 5'hc == io_pc[5:1] ? 16'h2000 : _GEN_11; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_13 = 5'hd == io_pc[5:1] ? 16'h2000 : _GEN_12; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_14 = 5'he == io_pc[5:1] ? 16'hed00 : _GEN_13; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_15 = 5'hf == io_pc[5:1] ? 16'hee02 : _GEN_14; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_16 = 5'h10 == io_pc[5:1] ? 16'hf000 : _GEN_15; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_17 = 5'h11 == io_pc[5:1] ? 16'h2000 : _GEN_16; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_18 = 5'h12 == io_pc[5:1] ? 16'h2000 : _GEN_17; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_19 = 5'h13 == io_pc[5:1] ? 16'h2000 : _GEN_18; // @[InstructionMemory.scala 17:{18,18}]
+  wire [15:0] _GEN_20 = 5'h14 == io_pc[5:1] ? 16'h2000 : _GEN_19; // @[InstructionMemory.scala 17:{18,18}]
+  assign io_instruction = 5'h15 == io_pc[5:1] ? 16'h2000 : _GEN_20; // @[InstructionMemory.scala 17:{18,18}]
 endmodule
 module FetchStage(
   input         clock,
@@ -35,31 +35,28 @@ module FetchStage(
 `ifdef RANDOMIZE_REG_INIT
   reg [31:0] _RAND_0;
   reg [31:0] _RAND_1;
-  reg [31:0] _RAND_2;
 `endif // RANDOMIZE_REG_INIT
-  wire [15:0] instructionMemory_io_pc; // @[FetchStage.scala 28:33]
-  wire [15:0] instructionMemory_io_instruction; // @[FetchStage.scala 28:33]
+  wire [15:0] instructionMemory_io_pc; // @[FetchStage.scala 24:33]
+  wire [15:0] instructionMemory_io_instruction; // @[FetchStage.scala 24:33]
   reg [15:0] pcReg; // @[FetchStage.scala 20:22]
-  wire [15:0] _pcReg_T_1 = pcReg + 16'h2; // @[FetchStage.scala 25:20]
-  reg [15:0] f2dReg_pc; // @[FetchStage.scala 32:26]
-  reg [15:0] f2dReg_instruction; // @[FetchStage.scala 33:35]
-  InstructionMemory instructionMemory ( // @[FetchStage.scala 28:33]
+  wire [15:0] _pc_T_1 = pcReg + 16'h2; // @[FetchStage.scala 21:54]
+  reg [15:0] io_f2d_instruction_REG; // @[FetchStage.scala 28:32]
+  InstructionMemory instructionMemory ( // @[FetchStage.scala 24:33]
     .io_pc(instructionMemory_io_pc),
     .io_instruction(instructionMemory_io_instruction)
   );
-  assign io_f2d_pc = f2dReg_pc; // @[FetchStage.scala 34:13]
-  assign io_f2d_instruction = f2dReg_instruction; // @[FetchStage.scala 35:22]
-  assign instructionMemory_io_pc = pcReg; // @[FetchStage.scala 29:27]
+  assign io_f2d_pc = pcReg; // @[FetchStage.scala 27:13]
+  assign io_f2d_instruction = io_f2d_instruction_REG; // @[FetchStage.scala 28:22]
+  assign instructionMemory_io_pc = io_branch_enable ? io_branch_pc : _pc_T_1; // @[FetchStage.scala 21:15]
   always @(posedge clock) begin
     if (reset) begin // @[FetchStage.scala 20:22]
-      pcReg <= 16'h0; // @[FetchStage.scala 20:22]
-    end else if (io_branch_enable) begin // @[FetchStage.scala 22:26]
-      pcReg <= io_branch_pc; // @[FetchStage.scala 23:11]
+      pcReg <= 16'hfffe; // @[FetchStage.scala 20:22]
+    end else if (io_branch_enable) begin // @[FetchStage.scala 21:15]
+      pcReg <= io_branch_pc;
     end else begin
-      pcReg <= _pcReg_T_1; // @[FetchStage.scala 25:11]
+      pcReg <= _pc_T_1;
     end
-    f2dReg_pc <= pcReg; // @[FetchStage.scala 32:26]
-    f2dReg_instruction <= instructionMemory_io_instruction; // @[FetchStage.scala 33:35]
+    io_f2d_instruction_REG <= instructionMemory_io_instruction; // @[FetchStage.scala 28:32]
   end
 // Register and memory initialization
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
@@ -100,9 +97,7 @@ initial begin
   _RAND_0 = {1{`RANDOM}};
   pcReg = _RAND_0[15:0];
   _RAND_1 = {1{`RANDOM}};
-  f2dReg_pc = _RAND_1[15:0];
-  _RAND_2 = {1{`RANDOM}};
-  f2dReg_instruction = _RAND_2[15:0];
+  io_f2d_instruction_REG = _RAND_1[15:0];
 `endif // RANDOMIZE_REG_INIT
   `endif // RANDOMIZE
 end // initial

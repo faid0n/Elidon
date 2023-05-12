@@ -26,14 +26,19 @@ class DecodeStage extends Module {
   io.d2e := d2eReg
   d2eReg.pc := io.f2d.pc
   d2eReg.instruction := instruction
-  d2eReg.rs1 := registerFile(Mux(opcode(3), instruction(7, 4), instruction(11, 8)))
-  d2eReg.rs2 := registerFile(instruction(3, 0))
+  val rs1Adress = Mux(opcode(3), instruction(3, 0), instruction(11, 8))
+  val rs2Adress = instruction(7, 4)
+  d2eReg.rs1 := registerFile(rs1Adress)
+  d2eReg.rs2 := registerFile(rs2Adress)
 
-
-  // TODO add forwarding
-
-  // write back functionality
-  when (io.m2w.writeBack) {
+  // write back & forwarding functionality
+  when(io.m2w.writeBack &&  io.m2w.rsdAdress =/= 0.U) {
     registerFile(io.m2w.rsdAdress) := io.m2w.rsd
+    when(io.m2w.rsdAdress === rs1Adress) {
+      d2eReg.rs1 := io.m2w.rsd
+    }
+    when(io.m2w.rsdAdress === rs2Adress) {
+      d2eReg.rs2 := io.m2w.rsd
+    }
   }
 }

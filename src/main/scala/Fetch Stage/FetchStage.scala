@@ -18,7 +18,7 @@ class FetchStage(filename: String) extends Module {
   })
 
   val pcReg = RegInit((-2).S(16.W).asUInt)
-  val pc = Mux(io.branch.enable, io.branch.pc, pcReg + 2.U)
+  val pc = Mux(io.branch.enable, pcReg + 2.U, io.branch.pc)
   pcReg := pc
 
   val instructionMemory = Module(new InstructionMemory(filename))

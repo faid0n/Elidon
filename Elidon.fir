@@ -21,41 +21,37 @@ circuit Elidon :
     rom[13] <= UInt<16>("h2000") @[InstructionMemory.scala 15:20]
     rom[14] <= UInt<16>("hed00") @[InstructionMemory.scala 15:20]
     rom[15] <= UInt<16>("hee02") @[InstructionMemory.scala 15:20]
-    rom[16] <= UInt<16>("hf004") @[InstructionMemory.scala 15:20]
+    rom[16] <= UInt<16>("hf000") @[InstructionMemory.scala 15:20]
     rom[17] <= UInt<16>("h2000") @[InstructionMemory.scala 15:20]
     rom[18] <= UInt<16>("h2000") @[InstructionMemory.scala 15:20]
     rom[19] <= UInt<16>("h2000") @[InstructionMemory.scala 15:20]
     rom[20] <= UInt<16>("h2000") @[InstructionMemory.scala 15:20]
     rom[21] <= UInt<16>("h2000") @[InstructionMemory.scala 15:20]
-    node _io_instruction_T = bits(io.pc, 7, 1) @[InstructionMemory.scala 16:30]
+    node _io_instruction_T = bits(io.pc, 7, 1) @[InstructionMemory.scala 17:30]
     node _io_instruction_T_1 = bits(_io_instruction_T, 4, 0)
-    io.instruction <= rom[_io_instruction_T_1] @[InstructionMemory.scala 16:18]
+    io.instruction <= rom[_io_instruction_T_1] @[InstructionMemory.scala 17:18]
 
   module FetchStage :
     input clock : Clock
     input reset : Reset
     output io : { flip branch : { enable : UInt<1>, pc : UInt<16>}, f2d : { pc : UInt<16>, instruction : UInt<16>}}
 
-    reg pcReg : UInt<16>, clock with :
-      reset => (reset, UInt<16>("h0")) @[FetchStage.scala 20:22]
-    when io.branch.enable : @[FetchStage.scala 22:26]
-      pcReg <= io.branch.pc @[FetchStage.scala 23:11]
-    else :
-      node _pcReg_T = add(pcReg, UInt<2>("h2")) @[FetchStage.scala 25:20]
-      node _pcReg_T_1 = tail(_pcReg_T, 1) @[FetchStage.scala 25:20]
-      pcReg <= _pcReg_T_1 @[FetchStage.scala 25:11]
-    inst instructionMemory of InstructionMemory @[FetchStage.scala 28:33]
+    node _pcReg_T = asUInt(asSInt(UInt<16>("hfffe"))) @[FetchStage.scala 20:36]
+    reg pcReg : UInt, clock with :
+      reset => (reset, _pcReg_T) @[FetchStage.scala 20:22]
+    node _pc_T = add(pcReg, UInt<2>("h2")) @[FetchStage.scala 21:54]
+    node _pc_T_1 = tail(_pc_T, 1) @[FetchStage.scala 21:54]
+    node pc = mux(io.branch.enable, io.branch.pc, _pc_T_1) @[FetchStage.scala 21:15]
+    pcReg <= pc @[FetchStage.scala 22:9]
+    inst instructionMemory of InstructionMemory @[FetchStage.scala 24:33]
     instructionMemory.clock <= clock
     instructionMemory.reset <= reset
-    instructionMemory.io.pc <= pcReg @[FetchStage.scala 29:27]
-    reg f2dReg_pc : UInt, clock with :
-      reset => (UInt<1>("h0"), f2dReg_pc) @[FetchStage.scala 32:26]
-    f2dReg_pc <= pcReg @[FetchStage.scala 32:26]
-    reg f2dReg_instruction : UInt, clock with :
-      reset => (UInt<1>("h0"), f2dReg_instruction) @[FetchStage.scala 33:35]
-    f2dReg_instruction <= instructionMemory.io.instruction @[FetchStage.scala 33:35]
-    io.f2d.pc <= f2dReg_pc @[FetchStage.scala 34:13]
-    io.f2d.instruction <= f2dReg_instruction @[FetchStage.scala 35:22]
+    instructionMemory.io.pc <= pc @[FetchStage.scala 25:27]
+    io.f2d.pc <= pcReg @[FetchStage.scala 27:13]
+    reg io_f2d_instruction_REG : UInt, clock with :
+      reset => (UInt<1>("h0"), io_f2d_instruction_REG) @[FetchStage.scala 28:32]
+    io_f2d_instruction_REG <= instructionMemory.io.instruction @[FetchStage.scala 28:32]
+    io.f2d.instruction <= io_f2d_instruction_REG @[FetchStage.scala 28:22]
 
   module DecodeStage :
     input clock : Clock
