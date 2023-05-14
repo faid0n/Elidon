@@ -57,8 +57,11 @@ public class Assembler {
                         }
                         String folderPathwrite = "..\\Machine Code";
                         String fileName = file.getName();
+                        Path filePath = Paths.get(folderPathwrite, fileName);
 
                         try {
+                            Files.deleteIfExists(filePath);
+
                             Files.newBufferedWriter(Paths.get(folderPathwrite, fileName), StandardOpenOption.CREATE)
                                     .append(String.join("\n", stringList2))
                                     .close();
