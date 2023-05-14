@@ -1,6 +1,21 @@
 import chisel3._
 import chisel3.util._
 
+// Integer power function, usefull,,,
+object pow {
+  def apply(a: Int, b: Int): Int = {
+    var base = a
+    var exp = b
+    var result = 1
+    while (exp > 0) {
+      if ((exp & 1) == 1) result = result * base
+      base = base * base
+      exp = exp / 2
+    }
+    result
+  }
+}
+
 class Elidon(filename: String) extends Module {
   val io = IO(new Bundle {
     val leds = Output(UInt(16.W))

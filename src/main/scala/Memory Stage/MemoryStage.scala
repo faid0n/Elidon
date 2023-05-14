@@ -2,8 +2,8 @@ import chisel3._
 import chisel3.util._
 
 class M2W extends Bundle {
-  val rsd = UInt(16.W)
-  val rsdAdress = UInt(4.W)
+  val rd = UInt(16.W)
+  val rdAdress = UInt(4.W)
   val writeBack = Bool()
 }
 
@@ -15,15 +15,16 @@ class MemoryStage extends Module {
   })
   // Default values:
   io.data.adress := io.e2m.resultOrAdress
-  io.data.writeValue := io.e2m.rsdAdressOrStoreValue
+  io.data.writeValue := io.e2m.rdAdressOrStoreValue
   io.data.write := io.e2m.store
   io.data.read := io.e2m.load
-  val writeValueReg = RegNext(io.e2m.rsdAdressOrStoreValue)
-  when(io.e2m.load) {
-    io.m2w.rsd := io.data.readValue
+  val loadReg = RegNext(io.e2m.load)
+  val writeValueReg = RegNext(io.e2m.resultOrAdress)
+  when(loadReg) {
+    io.m2w.rd := io.data.readValue
   } .otherwise {
-    io.m2w.rsd := writeValueReg
+    io.m2w.rd := writeValueReg
   }
-  io.m2w.rsdAdress := io.e2m.rsdAdressOrStoreValue(3, 0)
+  io.m2w.rdAdress := io.e2m.rdAdressOrStoreValue(3, 0)
   io.m2w.writeBack := io.e2m.load || io.e2m.writeBack
 }

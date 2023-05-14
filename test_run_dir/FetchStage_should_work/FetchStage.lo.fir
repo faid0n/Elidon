@@ -63,19 +63,25 @@ circuit FetchStage :
     output io_f2d_pc : UInt<16>
     output io_f2d_instruction : UInt<16>
 
-    inst instructionMemory of InstructionMemory @[FetchStage.scala 24:33]
-    node _pcReg_T = asUInt(asSInt(UInt<16>("hfffe"))) @[FetchStage.scala 20:36]
-    reg pcReg : UInt<16>, clock with :
-      reset => (UInt<1>("h0"), pcReg) @[FetchStage.scala 20:22]
-    node _pc_T = add(pcReg, UInt<2>("h2")) @[FetchStage.scala 21:54]
-    node _pc_T_1 = tail(_pc_T, 1) @[FetchStage.scala 21:54]
-    node pc = mux(io_branch_enable, io_branch_pc, _pc_T_1) @[FetchStage.scala 21:15]
-    reg io_f2d_instruction_REG : UInt<16>, clock with :
-      reset => (UInt<1>("h0"), io_f2d_instruction_REG) @[FetchStage.scala 28:32]
-    io_f2d_pc <= pcReg @[FetchStage.scala 27:13]
-    io_f2d_instruction <= io_f2d_instruction_REG @[FetchStage.scala 28:22]
-    pcReg <= mux(reset, _pcReg_T, pc) @[FetchStage.scala 20:{22,22} 22:9]
+    inst instructionMemory of InstructionMemory @[FetchStage.scala 25:33]
+    node _f2dReg_T = asUInt(asSInt(UInt<16>("hfffe"))) @[FetchStage.scala 20:38]
+    node _f2dReg_T_1 = cat(_f2dReg_T, UInt<16>("h0")) @[FetchStage.scala 20:45]
+    node _f2dReg_WIRE_1 = _f2dReg_T_1 @[FetchStage.scala 20:{67,67}]
+    node _f2dReg_T_2 = bits(_f2dReg_WIRE_1, 15, 0) @[FetchStage.scala 20:67]
+    node _f2dReg_T_3 = bits(_f2dReg_WIRE_1, 31, 16) @[FetchStage.scala 20:67]
+    reg f2dReg_pc : UInt<16>, clock with :
+      reset => (UInt<1>("h0"), f2dReg_pc) @[FetchStage.scala 20:23]
+    reg f2dReg_instruction : UInt<16>, clock with :
+      reset => (UInt<1>("h0"), f2dReg_instruction) @[FetchStage.scala 20:23]
+    node _pc_T = add(f2dReg_pc, UInt<2>("h2")) @[FetchStage.scala 22:58]
+    node _pc_T_1 = tail(_pc_T, 1) @[FetchStage.scala 22:58]
+    node pc = mux(io_branch_enable, io_branch_pc, _pc_T_1) @[FetchStage.scala 22:15]
+    node _f2dReg_WIRE_pc = _f2dReg_T_3 @[FetchStage.scala 20:{67,67}]
+    node _f2dReg_WIRE_instruction = _f2dReg_T_2 @[FetchStage.scala 20:{67,67}]
+    io_f2d_pc <= f2dReg_pc @[FetchStage.scala 21:10]
+    io_f2d_instruction <= f2dReg_instruction @[FetchStage.scala 21:10]
+    f2dReg_pc <= mux(reset, _f2dReg_WIRE_pc, pc) @[FetchStage.scala 20:{23,23} 23:13]
+    f2dReg_instruction <= mux(reset, _f2dReg_WIRE_instruction, instructionMemory.io_instruction) @[FetchStage.scala 20:{23,23} 27:22]
     instructionMemory.clock <= clock
     instructionMemory.reset <= reset
-    instructionMemory.io_pc <= pc @[FetchStage.scala 25:27]
-    io_f2d_instruction_REG <= instructionMemory.io_instruction @[FetchStage.scala 28:32]
+    instructionMemory.io_pc <= pc @[FetchStage.scala 26:27]

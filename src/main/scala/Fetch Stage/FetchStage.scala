@@ -17,13 +17,12 @@ class FetchStage(filename: String) extends Module {
     val f2d = Output(new F2D)
   })
 
-  val pcReg = RegInit((-2).S(16.W).asUInt)
-  val pc = Mux(io.branch.enable, pcReg + 2.U, io.branch.pc)
-  pcReg := pc
+  val f2dReg = RegInit(((-2).S(16.W).asUInt ## 0.U(16.W)).asTypeOf(new F2D))
+  io.f2d := f2dReg
+  val pc = Mux(io.branch.enable, io.branch.pc, f2dReg.pc + 2.U)
+  f2dReg.pc := pc
 
   val instructionMemory = Module(new InstructionMemory(filename))
   instructionMemory.io.pc := pc
-  
-  io.f2d.pc := pcReg
-  io.f2d.instruction := RegNext(instructionMemory.io.instruction)
+  f2dReg.instruction := instructionMemory.io.instruction
 }

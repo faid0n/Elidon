@@ -12,7 +12,7 @@ class FetchStageTest extends AnyFlatSpec with ChiselScalatestTester {
 
       // Testing normal operation (pc <- pc + 2)
       dut.io.branch.enable.poke(false.B)
-      dut.io.branch.pc.poke(0.U)
+      dut.io.branch.pc.poke(10.U)
       for (i <- 0 until machineCode.length) {
         dut.clock.step(1)
         dut.io.f2d.instruction.expect(machineCode(i))
@@ -22,7 +22,6 @@ class FetchStageTest extends AnyFlatSpec with ChiselScalatestTester {
       // Testing branching capacity
       dut.io.branch.enable.poke(true.B)
       for (i <- (machineCode.length - 2) to 0 by -2) {
-        println(i)
         dut.io.branch.pc.poke((2*i).U)
         dut.clock.step(1)
         dut.io.f2d.instruction.expect(machineCode(i))
@@ -31,3 +30,4 @@ class FetchStageTest extends AnyFlatSpec with ChiselScalatestTester {
     }
   }
 }
+

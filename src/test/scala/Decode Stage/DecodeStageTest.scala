@@ -10,47 +10,64 @@ class DecodeStageTest extends AnyFlatSpec with ChiselScalatestTester {
       // Test r-Type and write on registers 1-7 the values 1-7
       for (i <- 1 to 7) {
         // write on a register: r1 = 1;
-        dut.io.m2w.rsd.poke(i.U)
-        dut.io.m2w.rsdAdress.poke(i.U)
+        dut.io.m2w.rd.poke(i.U)
+        dut.io.m2w.rdAdress.poke(i.U)
+        dut.io.m2w.writeBack.poke(true.B);
         // pass isntruction
         dut.io.f2d.pc.poke(i.U)
-        val instruction = i.U(4.W) ## i.U(4.W) ## (i-1).U(4.W) ## i.U(4.W) // 
+        val instruction = ((i << 12) + (5 << 8) + ((i-1) << 4) + (i)).U(16.W) // 
+        dut.io.f2d.instruction.poke(instruction)
+        // check registers & forwarding
+        dut.clock.step(1)
+        dut.io.d2e.instruction.expect(instruction)
+        dut.io.d2e.pc.expect(i.U)
+        dut.io.d2e.rs1.expect((i).U)
+        dut.io.d2e.rs2.expect((i-1).U)
+      }
+
+      // Set rest of registers and don't check forwarding from now on
+      for (i <- 8 to 15) {
+        dut.io.m2w.rdAdress.poke(i.U)
+        dut.io.m2w.rd.poke(i.U)
+        dut.io.m2w.writeBack.poke(true.B)
+        dut.clock.step(1)
+      }
+      dut.io.m2w.writeBack.poke(false.B)
+
+      // Test m-Type
+      for (i <- 8 to 9) {
+        dut.io.f2d.pc.poke(i.U)
+        val instruction = ((i << 12) + (i << 8) + ((i-1) << 4) + (5)).U(16.W)
         dut.io.f2d.instruction.poke(instruction)
         // check results
         dut.clock.step(1)
         dut.io.d2e.instruction.expect(instruction)
         dut.io.d2e.pc.expect(i.U)
-        dut.io.d2e.rs1.expect((i-1).U)
-        dut.io.d2e.rs2.expect((i).U)
+        dut.io.d2e.rs1.expect((i).U)
+        dut.io.d2e.rs2.expect((i-1).U)
       }
 
-      // Test m-Type
-      for (i <- 8 to 9) {
+      // Test wI-Type, rI-type
+      for (i <- 10 to 14) {
         dut.io.f2d.pc.poke(i.U)
-        // val isntruction = i.U(4.W) ## i.U(4.W) ## (i-1).U(4.W) ## i.U(4.W) // 
-        // dut.io.f2d.instruction.poke(instruction) 
-        // // check results
-        // dut.clock.step(1)
-        // dut.io.d2e.instruction.expect(instruction)
-        // dut.io.d2e.pc.expect(i.U)
-        // dut.io.d2e.rs1.expect((i).U)
-        // dut.io.d2e.rs2.expect((i-1).U)
+        val instruction = ((i << 12) + (i << 8) + ((i-1) << 4) + (5)).U(16.W)
+        dut.io.f2d.instruction.poke(instruction)
+        // check, we care about rd/rs1
+        dut.clock.step(1)
+        dut.io.d2e.pc.expect(i.U)
+        dut.io.d2e.instruction.expect(instruction)
+        dut.io.d2e.rs1.expect(i.U)
       }
 
-      // Test wI-Type
-      for (i <- 10 to 11) {
-        dut.io.f2d.pc.poke(i.U)
-      }
-
-      // Test rI-Type
-      for (i <- 12 to 14) {
-        dut.io.f2d.pc.poke(i.U)
-      }
-
-      // Test j-Type
-      for (i <-  15 to 15) {
-        dut.io.f2d.pc.poke(i.U)
-      }
+      val i = 15
+      // Test j-Type`
+      dut.io.f2d.pc.poke(i.U)
+      val instruction = ((i << 12) + 255).U(16.W)
+      dut.io.f2d.instruction.poke(instruction) 
+      // check results (we don't care about resisters)
+      dut.clock.step(1)
+      dut.io.d2e.instruction.expect(instruction)
+      dut.io.d2e.pc.expect(i.U)
     }
   }
 }

@@ -3,7 +3,7 @@ import chisel3.util._
 
 class E2M extends Bundle {
   val resultOrAdress = UInt(16.W) // result to write back, or adress access in memory
-  val rsdAdressOrStoreValue = UInt(16.W)
+  val rdAdressOrStoreValue = UInt(16.W)
   val writeBack = Bool()
   val store = Bool()
   val load = Bool()
@@ -55,17 +55,17 @@ class ExecuteStage extends Module {
       io.d2e.rs1 === 0.U
 
   // Get pc from register if jalr,jar otherwise from the resulting addition
-  io.branch.pc := Mux(opcode === Opcode.jalr || opcode === Opcode.jr, added, io.d2e.rs1)
+  io.branch.pc := Mux(opcode === Opcode.jalr || opcode === Opcode.jr, io.d2e.rs1, added)
   e2mReg.resultOrAdress := added
   
   // This is either the destination register (adress) or it's the value
   // to store in memory
   when(opcode === Opcode.sw) {
-    e2mReg.rsdAdressOrStoreValue := io.d2e.rs1
+    e2mReg.rdAdressOrStoreValue := io.d2e.rs1
   } .elsewhen(opcode === Opcode.jalr) {
-    e2mReg.rsdAdressOrStoreValue := 1.U // ra
+    e2mReg.rdAdressOrStoreValue := 1.U // ra
   } .otherwise {
-    e2mReg.rsdAdressOrStoreValue := io.d2e.instruction(11, 8)
+    e2mReg.rdAdressOrStoreValue := io.d2e.instruction(11, 8)
   }
   
   // Only false only in sw, non linking branch instructions

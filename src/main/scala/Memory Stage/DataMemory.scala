@@ -1,6 +1,9 @@
 import chisel3._
 import chisel3.util._
 
+
+
+
 class DataIO extends Bundle {
   val adress = Input(UInt(16.W))
   val read = Input(Bool())
@@ -19,12 +22,7 @@ class DataMemory extends Module {
     val switches = Input(UInt(16.W))
   })
 
-  val memory = SyncReadMem(2^16, UInt(8.W))
-
-  // // readWrite but not yet supported by chisel..
-  // val lsB = memory.readWrite(io.data.adress, io.data.writeValue(7,0), io.data.read, io.data.write)
-  // val msB = memory.readWrite(io.data.adress + 1.U, io.data.writeValue(15, 8), io.data.read, io.data.write)
-  // io.data.readValue := msB ## lsB
+  val memory = SyncReadMem(pow(2, 16), UInt(8.W))
 
   // Read
   val lsB = memory.read(io.data.adress, io.data.read)
@@ -66,6 +64,8 @@ class DataMemory extends Module {
   }
 }
 
+
+
 // Old implementation with 2 SyncReadMem s:
 // class DataMemory extends Module {
 //   val io = IO(new Bundle {
@@ -86,8 +86,8 @@ class DataMemory extends Module {
 //   * We split the memory into 2 parts because we want to handle
 //   * 16 bit UInt(16.W)s, with byte adressing and also missaligned adresses
 //   ********************************************************/
-//   val evenMem = SyncReadMem(2^15, UInt(8.W))
-//   val oddMem = SyncReadMem(2^15, UInt(8.W))
+//   val evenMem = SyncReadMem(pow(2, 15), UInt(8.W))
+//   val oddMem = SyncReadMem(pow(2, 15), UInt(8.W))
 
 //   /********************************************************
 //   * Read Functionality

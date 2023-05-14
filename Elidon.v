@@ -115,8 +115,8 @@ module DecodeStage(
   output [15:0] io_d2e_instruction,
   output [15:0] io_d2e_rs1,
   output [15:0] io_d2e_rs2,
-  input  [15:0] io_m2w_rsd,
-  input  [3:0]  io_m2w_rsdAdress,
+  input  [15:0] io_m2w_rd,
+  input  [3:0]  io_m2w_rdAdress,
   input         io_m2w_writeBack
 );
 `ifdef RANDOMIZE_REG_INIT
@@ -193,113 +193,113 @@ module DecodeStage(
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_0 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'h0 == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_0 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'h0 == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_0 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_1 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'h1 == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_1 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'h1 == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_1 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_2 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'h2 == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_2 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'h2 == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_2 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_3 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'h3 == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_3 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'h3 == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_3 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_4 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'h4 == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_4 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'h4 == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_4 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_5 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'h5 == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_5 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'h5 == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_5 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_6 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'h6 == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_6 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'h6 == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_6 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_7 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'h7 == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_7 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'h7 == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_7 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_8 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'h8 == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_8 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'h8 == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_8 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_9 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'h9 == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_9 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'h9 == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_9 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_10 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'ha == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_10 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'ha == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_10 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_11 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'hb == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_11 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'hb == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_11 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_12 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'hc == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_12 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'hc == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_12 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_13 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'hd == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_13 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'hd == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_13 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_14 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'he == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_14 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'he == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_14 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     if (reset) begin // @[DecodeStage.scala 18:29]
       registerFile_15 <= 16'h0; // @[DecodeStage.scala 18:29]
     end else if (io_m2w_writeBack) begin // @[DecodeStage.scala 36:27]
-      if (4'hf == io_m2w_rsdAdress) begin // @[DecodeStage.scala 37:36]
-        registerFile_15 <= io_m2w_rsd; // @[DecodeStage.scala 37:36]
+      if (4'hf == io_m2w_rdAdress) begin // @[DecodeStage.scala 37:36]
+        registerFile_15 <= io_m2w_rd; // @[DecodeStage.scala 37:36]
       end
     end
     d2eReg_pc <= io_f2d_pc; // @[DecodeStage.scala 27:13]
@@ -421,7 +421,7 @@ module ExecuteStage(
   input  [15:0] io_d2e_rs1,
   input  [15:0] io_d2e_rs2,
   output [15:0] io_e2m_resultOrAdress,
-  output [15:0] io_e2m_rsdAdressOrStoreValue,
+  output [15:0] io_e2m_rdAdressOrStoreValue,
   output        io_e2m_writeBack,
   output        io_e2m_store,
   output        io_e2m_load
@@ -434,7 +434,7 @@ module ExecuteStage(
   reg [31:0] _RAND_4;
 `endif // RANDOMIZE_REG_INIT
   reg [15:0] e2mReg_resultOrAdress; // @[ExecuteStage.scala 38:23]
-  reg [15:0] e2mReg_rsdAdressOrStoreValue; // @[ExecuteStage.scala 38:23]
+  reg [15:0] e2mReg_rdAdressOrStoreValue; // @[ExecuteStage.scala 38:23]
   reg  e2mReg_writeBack; // @[ExecuteStage.scala 38:23]
   reg  e2mReg_store; // @[ExecuteStage.scala 38:23]
   reg  e2mReg_load; // @[ExecuteStage.scala 38:23]
@@ -482,7 +482,7 @@ module ExecuteStage(
   wire  _io_branch_enable_T_5 = opcode == 4'hc; // @[ExecuteStage.scala 54:14]
   wire  _io_branch_enable_T_6 = io_d2e_rs1 == 16'h0; // @[ExecuteStage.scala 55:18]
   wire  _io_branch_enable_T_7 = opcode == 4'hc & _io_branch_enable_T_6; // @[ExecuteStage.scala 54:29]
-  wire  _e2mReg_rsdAdressOrStoreValue_T = opcode == 4'h9; // @[ExecuteStage.scala 63:46]
+  wire  _e2mReg_rdAdressOrStoreValue_T = opcode == 4'h9; // @[ExecuteStage.scala 63:46]
   wire [15:0] _e2mReg_resultOrAdress_T = io_d2e_rs1 & io_d2e_rs2; // @[ExecuteStage.scala 76:43]
   wire [15:0] _e2mReg_resultOrAdress_T_1 = io_d2e_rs1 | io_d2e_rs2; // @[ExecuteStage.scala 79:45]
   wire [15:0] _e2mReg_resultOrAdress_T_2 = ~_e2mReg_resultOrAdress_T_1; // @[ExecuteStage.scala 79:32]
@@ -512,29 +512,29 @@ module ExecuteStage(
   assign io_branch_enable = _io_branch_enable_T_4 | _io_branch_enable_T_7; // @[ExecuteStage.scala 53:27]
   assign io_branch_pc = _io_branch_enable_T_1 | _io_branch_enable_T ? io_d2e_rs1 : added; // @[ExecuteStage.scala 58:22]
   assign io_e2m_resultOrAdress = e2mReg_resultOrAdress; // @[ExecuteStage.scala 39:10]
-  assign io_e2m_rsdAdressOrStoreValue = e2mReg_rsdAdressOrStoreValue; // @[ExecuteStage.scala 39:10]
+  assign io_e2m_rdAdressOrStoreValue = e2mReg_rdAdressOrStoreValue; // @[ExecuteStage.scala 39:10]
   assign io_e2m_writeBack = e2mReg_writeBack; // @[ExecuteStage.scala 39:10]
   assign io_e2m_store = e2mReg_store; // @[ExecuteStage.scala 39:10]
   assign io_e2m_load = e2mReg_load; // @[ExecuteStage.scala 39:10]
   always @(posedge clock) begin
     e2mReg_resultOrAdress <= _GEN_39[15:0]; // @[ExecuteStage.scala 38:{23,23}]
     if (reset) begin // @[ExecuteStage.scala 38:23]
-      e2mReg_rsdAdressOrStoreValue <= 16'h0; // @[ExecuteStage.scala 38:23]
+      e2mReg_rdAdressOrStoreValue <= 16'h0; // @[ExecuteStage.scala 38:23]
     end else if (opcode == 4'h9) begin // @[ExecuteStage.scala 63:38]
-      e2mReg_rsdAdressOrStoreValue <= io_d2e_rs1;
+      e2mReg_rdAdressOrStoreValue <= io_d2e_rs1;
     end else begin
-      e2mReg_rsdAdressOrStoreValue <= {{12'd0}, io_d2e_instruction[11:8]};
+      e2mReg_rdAdressOrStoreValue <= {{12'd0}, io_d2e_instruction[11:8]};
     end
     if (reset) begin // @[ExecuteStage.scala 38:23]
       e2mReg_writeBack <= 1'h0; // @[ExecuteStage.scala 38:23]
     end else begin
-      e2mReg_writeBack <= ~(_e2mReg_rsdAdressOrStoreValue_T | _io_branch_enable_T_3 | _io_branch_enable_T |
+      e2mReg_writeBack <= ~(_e2mReg_rdAdressOrStoreValue_T | _io_branch_enable_T_3 | _io_branch_enable_T |
         _io_branch_enable_T_5); // @[ExecuteStage.scala 66:20]
     end
     if (reset) begin // @[ExecuteStage.scala 38:23]
       e2mReg_store <= 1'h0; // @[ExecuteStage.scala 38:23]
     end else begin
-      e2mReg_store <= _e2mReg_rsdAdressOrStoreValue_T; // @[ExecuteStage.scala 69:16]
+      e2mReg_store <= _e2mReg_rdAdressOrStoreValue_T; // @[ExecuteStage.scala 69:16]
     end
     if (reset) begin // @[ExecuteStage.scala 38:23]
       e2mReg_load <= 1'h0; // @[ExecuteStage.scala 38:23]
@@ -581,7 +581,7 @@ initial begin
   _RAND_0 = {1{`RANDOM}};
   e2mReg_resultOrAdress = _RAND_0[15:0];
   _RAND_1 = {1{`RANDOM}};
-  e2mReg_rsdAdressOrStoreValue = _RAND_1[15:0];
+  e2mReg_rdAdressOrStoreValue = _RAND_1[15:0];
   _RAND_2 = {1{`RANDOM}};
   e2mReg_writeBack = _RAND_2[0:0];
   _RAND_3 = {1{`RANDOM}};
@@ -604,12 +604,12 @@ module MemoryStage(
   output        io_data_write,
   output [15:0] io_data_writeValue,
   input  [15:0] io_e2m_resultOrAdress,
-  input  [15:0] io_e2m_rsdAdressOrStoreValue,
+  input  [15:0] io_e2m_rdAdressOrStoreValue,
   input         io_e2m_writeBack,
   input         io_e2m_store,
   input         io_e2m_load,
-  output [15:0] io_m2w_rsd,
-  output [3:0]  io_m2w_rsdAdress,
+  output [15:0] io_m2w_rd,
+  output [3:0]  io_m2w_rdAdress,
   output        io_m2w_writeBack
 );
 `ifdef RANDOMIZE_REG_INIT
@@ -619,12 +619,12 @@ module MemoryStage(
   assign io_data_adress = io_e2m_resultOrAdress; // @[MemoryStage.scala 17:18]
   assign io_data_read = io_e2m_load; // @[MemoryStage.scala 20:16]
   assign io_data_write = io_e2m_store; // @[MemoryStage.scala 19:17]
-  assign io_data_writeValue = io_e2m_rsdAdressOrStoreValue; // @[MemoryStage.scala 18:22]
-  assign io_m2w_rsd = io_e2m_load ? io_data_readValue : writeValueReg; // @[MemoryStage.scala 22:21 23:16 25:16]
-  assign io_m2w_rsdAdress = io_e2m_rsdAdressOrStoreValue[3:0]; // @[MemoryStage.scala 27:51]
+  assign io_data_writeValue = io_e2m_rdAdressOrStoreValue; // @[MemoryStage.scala 18:22]
+  assign io_m2w_rd = io_e2m_load ? io_data_readValue : writeValueReg; // @[MemoryStage.scala 22:21 23:16 25:16]
+  assign io_m2w_rdAdress = io_e2m_rdAdressOrStoreValue[3:0]; // @[MemoryStage.scala 27:51]
   assign io_m2w_writeBack = io_e2m_load | io_e2m_writeBack; // @[MemoryStage.scala 28:35]
   always @(posedge clock) begin
-    writeValueReg <= io_e2m_rsdAdressOrStoreValue; // @[MemoryStage.scala 21:30]
+    writeValueReg <= io_e2m_rdAdressOrStoreValue; // @[MemoryStage.scala 21:30]
   end
 // Register and memory initialization
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
@@ -986,8 +986,8 @@ module Elidon(
   wire [15:0] decodeStage_io_d2e_instruction; // @[Main.scala 16:27]
   wire [15:0] decodeStage_io_d2e_rs1; // @[Main.scala 16:27]
   wire [15:0] decodeStage_io_d2e_rs2; // @[Main.scala 16:27]
-  wire [15:0] decodeStage_io_m2w_rsd; // @[Main.scala 16:27]
-  wire [3:0] decodeStage_io_m2w_rsdAdress; // @[Main.scala 16:27]
+  wire [15:0] decodeStage_io_m2w_rd; // @[Main.scala 16:27]
+  wire [3:0] decodeStage_io_m2w_rdAdress; // @[Main.scala 16:27]
   wire  decodeStage_io_m2w_writeBack; // @[Main.scala 16:27]
   wire  executeStage_clock; // @[Main.scala 17:28]
   wire  executeStage_reset; // @[Main.scala 17:28]
@@ -998,7 +998,7 @@ module Elidon(
   wire [15:0] executeStage_io_d2e_rs1; // @[Main.scala 17:28]
   wire [15:0] executeStage_io_d2e_rs2; // @[Main.scala 17:28]
   wire [15:0] executeStage_io_e2m_resultOrAdress; // @[Main.scala 17:28]
-  wire [15:0] executeStage_io_e2m_rsdAdressOrStoreValue; // @[Main.scala 17:28]
+  wire [15:0] executeStage_io_e2m_rdAdressOrStoreValue; // @[Main.scala 17:28]
   wire  executeStage_io_e2m_writeBack; // @[Main.scala 17:28]
   wire  executeStage_io_e2m_store; // @[Main.scala 17:28]
   wire  executeStage_io_e2m_load; // @[Main.scala 17:28]
@@ -1009,12 +1009,12 @@ module Elidon(
   wire  memoryStage_io_data_write; // @[Main.scala 18:27]
   wire [15:0] memoryStage_io_data_writeValue; // @[Main.scala 18:27]
   wire [15:0] memoryStage_io_e2m_resultOrAdress; // @[Main.scala 18:27]
-  wire [15:0] memoryStage_io_e2m_rsdAdressOrStoreValue; // @[Main.scala 18:27]
+  wire [15:0] memoryStage_io_e2m_rdAdressOrStoreValue; // @[Main.scala 18:27]
   wire  memoryStage_io_e2m_writeBack; // @[Main.scala 18:27]
   wire  memoryStage_io_e2m_store; // @[Main.scala 18:27]
   wire  memoryStage_io_e2m_load; // @[Main.scala 18:27]
-  wire [15:0] memoryStage_io_m2w_rsd; // @[Main.scala 18:27]
-  wire [3:0] memoryStage_io_m2w_rsdAdress; // @[Main.scala 18:27]
+  wire [15:0] memoryStage_io_m2w_rd; // @[Main.scala 18:27]
+  wire [3:0] memoryStage_io_m2w_rdAdress; // @[Main.scala 18:27]
   wire  memoryStage_io_m2w_writeBack; // @[Main.scala 18:27]
   wire  dataMemory_clock; // @[Main.scala 30:26]
   wire  dataMemory_reset; // @[Main.scala 30:26]
@@ -1048,8 +1048,8 @@ module Elidon(
     .io_d2e_instruction(decodeStage_io_d2e_instruction),
     .io_d2e_rs1(decodeStage_io_d2e_rs1),
     .io_d2e_rs2(decodeStage_io_d2e_rs2),
-    .io_m2w_rsd(decodeStage_io_m2w_rsd),
-    .io_m2w_rsdAdress(decodeStage_io_m2w_rsdAdress),
+    .io_m2w_rd(decodeStage_io_m2w_rd),
+    .io_m2w_rdAdress(decodeStage_io_m2w_rdAdress),
     .io_m2w_writeBack(decodeStage_io_m2w_writeBack)
   );
   ExecuteStage executeStage ( // @[Main.scala 17:28]
@@ -1062,7 +1062,7 @@ module Elidon(
     .io_d2e_rs1(executeStage_io_d2e_rs1),
     .io_d2e_rs2(executeStage_io_d2e_rs2),
     .io_e2m_resultOrAdress(executeStage_io_e2m_resultOrAdress),
-    .io_e2m_rsdAdressOrStoreValue(executeStage_io_e2m_rsdAdressOrStoreValue),
+    .io_e2m_rdAdressOrStoreValue(executeStage_io_e2m_rdAdressOrStoreValue),
     .io_e2m_writeBack(executeStage_io_e2m_writeBack),
     .io_e2m_store(executeStage_io_e2m_store),
     .io_e2m_load(executeStage_io_e2m_load)
@@ -1075,12 +1075,12 @@ module Elidon(
     .io_data_write(memoryStage_io_data_write),
     .io_data_writeValue(memoryStage_io_data_writeValue),
     .io_e2m_resultOrAdress(memoryStage_io_e2m_resultOrAdress),
-    .io_e2m_rsdAdressOrStoreValue(memoryStage_io_e2m_rsdAdressOrStoreValue),
+    .io_e2m_rdAdressOrStoreValue(memoryStage_io_e2m_rdAdressOrStoreValue),
     .io_e2m_writeBack(memoryStage_io_e2m_writeBack),
     .io_e2m_store(memoryStage_io_e2m_store),
     .io_e2m_load(memoryStage_io_e2m_load),
-    .io_m2w_rsd(memoryStage_io_m2w_rsd),
-    .io_m2w_rsdAdress(memoryStage_io_m2w_rsdAdress),
+    .io_m2w_rd(memoryStage_io_m2w_rd),
+    .io_m2w_rdAdress(memoryStage_io_m2w_rdAdress),
     .io_m2w_writeBack(memoryStage_io_m2w_writeBack)
   );
   DataMemory dataMemory ( // @[Main.scala 30:26]
@@ -1113,8 +1113,8 @@ module Elidon(
   assign decodeStage_reset = reset;
   assign decodeStage_io_f2d_pc = fetchStage_io_f2d_pc; // @[Main.scala 21:22]
   assign decodeStage_io_f2d_instruction = fetchStage_io_f2d_instruction; // @[Main.scala 21:22]
-  assign decodeStage_io_m2w_rsd = memoryStage_io_m2w_rsd; // @[Main.scala 24:22]
-  assign decodeStage_io_m2w_rsdAdress = memoryStage_io_m2w_rsdAdress; // @[Main.scala 24:22]
+  assign decodeStage_io_m2w_rd = memoryStage_io_m2w_rd; // @[Main.scala 24:22]
+  assign decodeStage_io_m2w_rdAdress = memoryStage_io_m2w_rdAdress; // @[Main.scala 24:22]
   assign decodeStage_io_m2w_writeBack = memoryStage_io_m2w_writeBack; // @[Main.scala 24:22]
   assign executeStage_clock = clock;
   assign executeStage_reset = reset;
@@ -1125,7 +1125,7 @@ module Elidon(
   assign memoryStage_clock = clock;
   assign memoryStage_io_data_readValue = dataMemory_io_data_readValue; // @[Main.scala 31:23]
   assign memoryStage_io_e2m_resultOrAdress = executeStage_io_e2m_resultOrAdress; // @[Main.scala 23:22]
-  assign memoryStage_io_e2m_rsdAdressOrStoreValue = executeStage_io_e2m_rsdAdressOrStoreValue; // @[Main.scala 23:22]
+  assign memoryStage_io_e2m_rdAdressOrStoreValue = executeStage_io_e2m_rdAdressOrStoreValue; // @[Main.scala 23:22]
   assign memoryStage_io_e2m_writeBack = executeStage_io_e2m_writeBack; // @[Main.scala 23:22]
   assign memoryStage_io_e2m_store = executeStage_io_e2m_store; // @[Main.scala 23:22]
   assign memoryStage_io_e2m_load = executeStage_io_e2m_load; // @[Main.scala 23:22]

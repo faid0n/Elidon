@@ -56,7 +56,7 @@ circuit Elidon :
   module DecodeStage :
     input clock : Clock
     input reset : Reset
-    output io : { flip f2d : { pc : UInt<16>, instruction : UInt<16>}, d2e : { pc : UInt<16>, instruction : UInt<16>, rs1 : UInt<16>, rs2 : UInt<16>}, flip m2w : { rsd : UInt<16>, rsdAdress : UInt<4>, writeBack : UInt<1>}}
+    output io : { flip f2d : { pc : UInt<16>, instruction : UInt<16>}, d2e : { pc : UInt<16>, instruction : UInt<16>, rs1 : UInt<16>, rs2 : UInt<16>}, flip m2w : { rd : UInt<16>, rdAdress : UInt<4>, writeBack : UInt<1>}}
 
     wire _registerFile_WIRE : UInt<16>[16] @[DecodeStage.scala 18:46]
     _registerFile_WIRE[0] <= UInt<16>("h0") @[DecodeStage.scala 18:46]
@@ -91,21 +91,21 @@ circuit Elidon :
     node _d2eReg_rs2_T = bits(io.f2d.instruction, 3, 0) @[DecodeStage.scala 30:41]
     d2eReg.rs2 <= registerFile[_d2eReg_rs2_T] @[DecodeStage.scala 30:14]
     when io.m2w.writeBack : @[DecodeStage.scala 36:27]
-      registerFile[io.m2w.rsdAdress] <= io.m2w.rsd @[DecodeStage.scala 37:36]
+      registerFile[io.m2w.rdAdress] <= io.m2w.rd @[DecodeStage.scala 37:36]
 
 
   module ExecuteStage :
     input clock : Clock
     input reset : Reset
-    output io : { branch : { enable : UInt<1>, pc : UInt<16>}, flip d2e : { pc : UInt<16>, instruction : UInt<16>, rs1 : UInt<16>, rs2 : UInt<16>}, e2m : { resultOrAdress : UInt<16>, rsdAdressOrStoreValue : UInt<16>, writeBack : UInt<1>, store : UInt<1>, load : UInt<1>}}
+    output io : { branch : { enable : UInt<1>, pc : UInt<16>}, flip d2e : { pc : UInt<16>, instruction : UInt<16>, rs1 : UInt<16>, rs2 : UInt<16>}, e2m : { resultOrAdress : UInt<16>, rdAdressOrStoreValue : UInt<16>, writeBack : UInt<1>, store : UInt<1>, load : UInt<1>}}
 
-    wire _e2mReg_WIRE : { resultOrAdress : UInt<16>, rsdAdressOrStoreValue : UInt<16>, writeBack : UInt<1>, store : UInt<1>, load : UInt<1>} @[ExecuteStage.scala 38:36]
+    wire _e2mReg_WIRE : { resultOrAdress : UInt<16>, rdAdressOrStoreValue : UInt<16>, writeBack : UInt<1>, store : UInt<1>, load : UInt<1>} @[ExecuteStage.scala 38:36]
     _e2mReg_WIRE.load <= UInt<1>("h0") @[ExecuteStage.scala 38:36]
     _e2mReg_WIRE.store <= UInt<1>("h0") @[ExecuteStage.scala 38:36]
     _e2mReg_WIRE.writeBack <= UInt<1>("h0") @[ExecuteStage.scala 38:36]
-    _e2mReg_WIRE.rsdAdressOrStoreValue <= UInt<16>("h0") @[ExecuteStage.scala 38:36]
+    _e2mReg_WIRE.rdAdressOrStoreValue <= UInt<16>("h0") @[ExecuteStage.scala 38:36]
     _e2mReg_WIRE.resultOrAdress <= UInt<16>("h0") @[ExecuteStage.scala 38:36]
-    reg e2mReg : { resultOrAdress : UInt<16>, rsdAdressOrStoreValue : UInt<16>, writeBack : UInt<1>, store : UInt<1>, load : UInt<1>}, clock with :
+    reg e2mReg : { resultOrAdress : UInt<16>, rdAdressOrStoreValue : UInt<16>, writeBack : UInt<1>, store : UInt<1>, load : UInt<1>}, clock with :
       reset => (reset, _e2mReg_WIRE) @[ExecuteStage.scala 38:23]
     io.e2m <= e2mReg @[ExecuteStage.scala 39:10]
     node opcode = bits(io.d2e.instruction, 15, 12) @[ExecuteStage.scala 41:34]
@@ -133,10 +133,10 @@ circuit Elidon :
     node _io_branch_pc_T_3 = mux(_io_branch_pc_T_2, io.d2e.rs1, added) @[ExecuteStage.scala 58:22]
     io.branch.pc <= _io_branch_pc_T_3 @[ExecuteStage.scala 58:16]
     e2mReg.resultOrAdress <= added @[ExecuteStage.scala 59:25]
-    node _e2mReg_rsdAdressOrStoreValue_T = eq(opcode, UInt<4>("h9")) @[ExecuteStage.scala 63:46]
-    node _e2mReg_rsdAdressOrStoreValue_T_1 = bits(io.d2e.instruction, 11, 8) @[ExecuteStage.scala 63:91]
-    node _e2mReg_rsdAdressOrStoreValue_T_2 = mux(_e2mReg_rsdAdressOrStoreValue_T, io.d2e.rs1, _e2mReg_rsdAdressOrStoreValue_T_1) @[ExecuteStage.scala 63:38]
-    e2mReg.rsdAdressOrStoreValue <= _e2mReg_rsdAdressOrStoreValue_T_2 @[ExecuteStage.scala 63:32]
+    node _e2mReg_rdAdressOrStoreValue_T = eq(opcode, UInt<4>("h9")) @[ExecuteStage.scala 63:46]
+    node _e2mReg_rdAdressOrStoreValue_T_1 = bits(io.d2e.instruction, 11, 8) @[ExecuteStage.scala 63:91]
+    node _e2mReg_rdAdressOrStoreValue_T_2 = mux(_e2mReg_rdAdressOrStoreValue_T, io.d2e.rs1, _e2mReg_rdAdressOrStoreValue_T_1) @[ExecuteStage.scala 63:38]
+    e2mReg.rdAdressOrStoreValue <= _e2mReg_rdAdressOrStoreValue_T_2 @[ExecuteStage.scala 63:32]
     node _e2mReg_writeBack_T = eq(opcode, UInt<4>("h9")) @[ExecuteStage.scala 66:32]
     node _e2mReg_writeBack_T_1 = eq(opcode, UInt<4>("hf")) @[ExecuteStage.scala 66:56]
     node _e2mReg_writeBack_T_2 = or(_e2mReg_writeBack_T, _e2mReg_writeBack_T_1) @[ExecuteStage.scala 66:46]
@@ -261,21 +261,21 @@ circuit Elidon :
   module MemoryStage :
     input clock : Clock
     input reset : Reset
-    output io : { flip data : { flip adress : UInt<16>, flip read : UInt<1>, readValue : UInt<16>, flip write : UInt<1>, flip writeValue : UInt<16>}, flip e2m : { resultOrAdress : UInt<16>, rsdAdressOrStoreValue : UInt<16>, writeBack : UInt<1>, store : UInt<1>, load : UInt<1>}, m2w : { rsd : UInt<16>, rsdAdress : UInt<4>, writeBack : UInt<1>}}
+    output io : { flip data : { flip adress : UInt<16>, flip read : UInt<1>, readValue : UInt<16>, flip write : UInt<1>, flip writeValue : UInt<16>}, flip e2m : { resultOrAdress : UInt<16>, rdAdressOrStoreValue : UInt<16>, writeBack : UInt<1>, store : UInt<1>, load : UInt<1>}, m2w : { rd : UInt<16>, rdAdress : UInt<4>, writeBack : UInt<1>}}
 
     io.data.adress <= io.e2m.resultOrAdress @[MemoryStage.scala 17:18]
-    io.data.writeValue <= io.e2m.rsdAdressOrStoreValue @[MemoryStage.scala 18:22]
+    io.data.writeValue <= io.e2m.rdAdressOrStoreValue @[MemoryStage.scala 18:22]
     io.data.write <= io.e2m.store @[MemoryStage.scala 19:17]
     io.data.read <= io.e2m.load @[MemoryStage.scala 20:16]
     reg writeValueReg : UInt, clock with :
       reset => (UInt<1>("h0"), writeValueReg) @[MemoryStage.scala 21:30]
-    writeValueReg <= io.e2m.rsdAdressOrStoreValue @[MemoryStage.scala 21:30]
+    writeValueReg <= io.e2m.rdAdressOrStoreValue @[MemoryStage.scala 21:30]
     when io.e2m.load : @[MemoryStage.scala 22:21]
-      io.m2w.rsd <= io.data.readValue @[MemoryStage.scala 23:16]
+      io.m2w.rd <= io.data.readValue @[MemoryStage.scala 23:16]
     else :
-      io.m2w.rsd <= writeValueReg @[MemoryStage.scala 25:16]
-    node _io_m2w_rsdAdress_T = bits(io.e2m.rsdAdressOrStoreValue, 3, 0) @[MemoryStage.scala 27:51]
-    io.m2w.rsdAdress <= _io_m2w_rsdAdress_T @[MemoryStage.scala 27:20]
+      io.m2w.rd <= writeValueReg @[MemoryStage.scala 25:16]
+    node _io_m2w_rdAdress_T = bits(io.e2m.rdAdressOrStoreValue, 3, 0) @[MemoryStage.scala 27:51]
+    io.m2w.rdAdress <= _io_m2w_rdAdress_T @[MemoryStage.scala 27:20]
     node _io_m2w_writeBack_T = or(io.e2m.load, io.e2m.writeBack) @[MemoryStage.scala 28:35]
     io.m2w.writeBack <= _io_m2w_writeBack_T @[MemoryStage.scala 28:20]
 
@@ -488,11 +488,11 @@ circuit Elidon :
     memoryStage.io.e2m.load <= executeStage.io.e2m.load @[Main.scala 23:22]
     memoryStage.io.e2m.store <= executeStage.io.e2m.store @[Main.scala 23:22]
     memoryStage.io.e2m.writeBack <= executeStage.io.e2m.writeBack @[Main.scala 23:22]
-    memoryStage.io.e2m.rsdAdressOrStoreValue <= executeStage.io.e2m.rsdAdressOrStoreValue @[Main.scala 23:22]
+    memoryStage.io.e2m.rdAdressOrStoreValue <= executeStage.io.e2m.rdAdressOrStoreValue @[Main.scala 23:22]
     memoryStage.io.e2m.resultOrAdress <= executeStage.io.e2m.resultOrAdress @[Main.scala 23:22]
     decodeStage.io.m2w.writeBack <= memoryStage.io.m2w.writeBack @[Main.scala 24:22]
-    decodeStage.io.m2w.rsdAdress <= memoryStage.io.m2w.rsdAdress @[Main.scala 24:22]
-    decodeStage.io.m2w.rsd <= memoryStage.io.m2w.rsd @[Main.scala 24:22]
+    decodeStage.io.m2w.rdAdress <= memoryStage.io.m2w.rdAdress @[Main.scala 24:22]
+    decodeStage.io.m2w.rd <= memoryStage.io.m2w.rd @[Main.scala 24:22]
     fetchStage.io.branch.pc <= executeStage.io.branch.pc @[Main.scala 27:24]
     fetchStage.io.branch.enable <= executeStage.io.branch.enable @[Main.scala 27:24]
     inst dataMemory of DataMemory @[Main.scala 30:26]
