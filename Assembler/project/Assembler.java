@@ -149,8 +149,8 @@ public class Assembler {
                         InsertToAssemblyCodeBits(PrependBits(4, String.valueOf(instructionFormat.Opcode))); // Opcode has 4 bits
                         InsertToAssemblyCodeBits(PrependBits(4, String.valueOf(Registers.get(instruction.Argument0)))); // rd has 4 bits
 
-                        InsertToAssemblyCodeBits(PrependBits(4, String.valueOf(Registers.get(instruction.Argument1)))); // rs has 4 bits
-                        InsertToAssemblyCodeBits(PrependBits(4, String.valueOf(Registers.get(instruction.Argument2)))); // rt has 4 bits
+                        InsertToAssemblyCodeBits(PrependBits(4, String.valueOf(Registers.get(instruction.Argument2)))); // rs has 4 bits
+                        InsertToAssemblyCodeBits(PrependBits(4, String.valueOf(Registers.get(instruction.Argument1)))); // rt has 4 bits
                         break;
                     case I:
                         InsertToAssemblyCodeBits(PrependBits(4, String.valueOf(instructionFormat.Opcode))); // Opcode has 4 bits
